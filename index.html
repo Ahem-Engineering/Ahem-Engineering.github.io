@@ -3,7 +3,7 @@
     <title>Ahem Engineering</title>
     
     <script>
-      const urlParams = new URLSearchParams(queryString);
+      const urlParams = new URLSearchParams(window.location.search);
       const product = urlParams.get('Product_ID');
     </script>
   </head>

@@ -3,14 +3,19 @@
     <title>Ahem Engineering</title>
     
     <script src="https://git.ahem.net.au/script/pull.js"></script>
+    <script src="https://git.ahem.net.au/script/populate.js"></script>
+
     <script>
       const urlParams = new URLSearchParams(window.location.search);
       const product = urlParams.get('product_id');
       var product_data = {};
-      pullJSON("https://git.ahem.net.au/" + product + ".json", function (data) {
-        product_data = data;
-        console.log(data);
-      });
+      
+      pullJSON(  'https://git.ahem.net.au/{{product.selected_or_first_available_variant.barcode}}.json',
+        function (data) {
+          document.getElementById('git-title').innerHTML += ' ' + product;
+          populateDivById('git-meta', JSON.parse(data));
+        }
+      );
     </script>
   </head>
   <body>
@@ -19,5 +24,8 @@
     <p>
       Please check out our <a href="https://shop.ahem.net.au">shop</a> for some awesome parts and great deals!
     </p>
+    
+    <h2 id="git-title">Product ID:</h1>
+    <div id="git-meta">Searching...</div>
   </body>
 </html>

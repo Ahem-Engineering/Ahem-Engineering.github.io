@@ -12,7 +12,7 @@
       
       pullJSON(  'https://git.ahem.net.au/{{product.selected_or_first_available_variant.barcode}}.json',
         function (data) {
-          document.getElementById('git-title').innerHTML += ' ' + product;
+          document.getElementById('git-title').innerHTML = 'Product ID: ' + product;
           populateDivById('git-meta', JSON.parse(data));
         }
       );

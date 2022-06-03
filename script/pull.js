@@ -5,10 +5,10 @@
 var git_data_this = {};
 function pullJSON(url, fn) {
   var request = new XMLHttpRequest();
-  request.onreadystatechange = function() {
-    git_data_this = this;
-    //fn(git_data);
-    fn(JSON.parse(this.responseText));
+  request.onloadend = function() {
+    if (this.status != 200) return;
+    var data = JSON.parse(this.responseText);
+    fn(data);
   };
   request.open('get', url, true);
   request.send();

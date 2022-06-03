@@ -10,10 +10,11 @@
       const product = urlParams.get('product_id');
       var product_data = {};
       
-      pullJSON(  'https://git.ahem.net.au/{{product.selected_or_first_available_variant.barcode}}.json',
+      pullJSON(  'https://git.ahem.net.au/' + product + '.json',
         function (data) {
+        product_data = data;
           document.getElementById('git-title').innerHTML = 'Product ID: ' + product;
-          populateDivById('git-meta', JSON.parse(data));
+          populateDivById('git-meta', data);
         }
       );
     </script>

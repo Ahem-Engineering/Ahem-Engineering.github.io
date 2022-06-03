@@ -6,7 +6,9 @@
     <script>
       const urlParams = new URLSearchParams(window.location.search);
       const product = urlParams.get('product_id');
+      var product_data = {};
       pullJSON("https://git.ahem.net.au/" + product + ".json", function (data) {
+        product_data = data;
         console.log(data);
       });
     </script>

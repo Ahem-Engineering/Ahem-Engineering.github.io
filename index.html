@@ -2,9 +2,13 @@
   <head>
     <title>Ahem Engineering</title>
     
+    <script src="https://git.ahem.net.au/script/pull.js"></script>
     <script>
       const urlParams = new URLSearchParams(window.location.search);
       const product = urlParams.get('product_id');
+      pullJSON("https://git.ahem.net.au/" + product + ".json", function (data) {
+        console.log(data);
+      });
     </script>
   </head>
   <body>

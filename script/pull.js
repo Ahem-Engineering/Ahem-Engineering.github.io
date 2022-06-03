@@ -7,7 +7,7 @@ function pullJSON(url, fn) {
   request.onreadystatechange = function() {
     //var git_data = JSON.parse(this.responseText);
     //fn(git_data);
-    fn(this.responseText);
+    fn(JSON.parse(this.responseText));
   };
   request.open('get', url, true);
   request.send();

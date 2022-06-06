@@ -2,7 +2,6 @@
   <head>
     <title>Ahem Engineering</title>
     
-    <script src='https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js'></script>
     <script src="https://git.ahem.net.au/script/pull.js"></script>
     <script src="https://git.ahem.net.au/script/populate.js"></script>
     <script src="https://git.ahem.net.au/script/addBuyButton.js"></script>
@@ -16,7 +15,7 @@
         function (data) {
           document.getElementById('git-title').innerHTML = 'Product ID: ' + product;
           populateDivById('git-meta',data);
-          addBuyButtonToId('product-buy-button', data.id)
+          addBuyButtonToId('product-buy-button', data.id);
         }
       );
     </script>

@@ -54,7 +54,7 @@
     {
       "pin" : 4,
       "name" : "SCL",
-      "description" : "I2C Serial Clock",
+      "description" : "I2C Serial Clock"
     },
     {
       "pin" : 5,

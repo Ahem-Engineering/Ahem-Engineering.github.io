@@ -17,22 +17,27 @@
           populateDivById('git-meta',data);
           pullJSON (
             'https://git.ahem.net.au/shopify-buy-button-options.json',
-            function (bb-options) {  
+            function (bb_options) {  
               function ShopifyBuyInit() {
-                var client = ShopifyBuy.buildClient({
-                  domain: 'ahem-engineering.myshopify.com',
-                  storefrontAccessToken: 'c43dd5285b9eaf2ce09081222ee4c393',
-                });
+                var client = ShopifyBuy.buildClient(
+                  {
+                    domain: 'ahem-engineering.myshopify.com',
+                    storefrontAccessToken: 'c43dd5285b9eaf2ce09081222ee4c393',
+                  }
+                );
                 ShopifyBuy.UI.onReady(client).then(function (ui) {
-                  ui.createComponent('product', {
-                    id: data.id,
-                    node: document.getElementById('product-buy-button'),
-                    moneyFormat: '%24%7B%7Bamount%7D%7D',
-                    options: bb-options
+                  ui.createComponent(
+                    'product', 
+                    {
+                      id: data.id,
+                      node: document.getElementById('product-buy-button'),
+                      moneyFormat: '%24%7B%7Bamount%7D%7D',
+                      options: bb_options
+                    }
                   );
-                });
+                }
               }
-            });
+            }
           );
         }
       );

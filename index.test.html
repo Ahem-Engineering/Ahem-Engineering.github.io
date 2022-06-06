@@ -9,10 +9,6 @@
     <script>
       const urlParams = new URLSearchParams(window.location.search);
       const product = urlParams.get('product_id');
-      var product_data = {};
-      
-      const urlParams = new URLSearchParams(window.location.search);
-      const product = urlParams.get('product_id');
 
       pullJSON(
         'https://git.ahem.net.au/' + product + '.json',

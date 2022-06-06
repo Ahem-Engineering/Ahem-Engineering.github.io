@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>Ahem Engineering</title>
+    
+    <script src='https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js'></script>
+    <script src="https://git.ahem.net.au/script/pull.js"></script>
+    <script src="https://git.ahem.net.au/script/populate.js"></script>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const product = urlParams.get('product_id');
+      var product_data = {};
+      
+      const urlParams = new URLSearchParams(window.location.search);
+      const product = urlParams.get('product_id');
+
+      pullJSON(
+        'https://git.ahem.net.au/' + product + '.json',
+        function (data) {
+          document.getElementById('git-title').innerHTML = 'Product ID: ' + product;
+          populateDivById('git-meta',data);
+          pullJSON (
+            'https://git.ahem.net.au/shopify-buy-button-options.json',
+            function (bb-options) {  
+              function ShopifyBuyInit() {
+                var client = ShopifyBuy.buildClient({
+                  domain: 'ahem-engineering.myshopify.com',
+                  storefrontAccessToken: 'c43dd5285b9eaf2ce09081222ee4c393',
+                });
+                ShopifyBuy.UI.onReady(client).then(function (ui) {
+                  ui.createComponent('product', {
+                    id: data.id,
+                    node: document.getElementById('product-buy-button'),
+                    moneyFormat: '%24%7B%7Bamount%7D%7D',
+                    options: bb-options
+                  );
+                });
+              }
+            });
+          );
+        }
+      );
+    </script>
+  </head>
+  <body>
+    <h1>Welcome to Ahem Engineering</H1>
+    <hr>
+    <p>
+      Please check out our <a href="https://shop.ahem.net.au">shop</a> for some awesome parts and great deals!
+    </p>
+    
+    <h2 id="git-title">Product ID:</h2>
+    <div id="git-meta">Searching...</div>
+    <div id='product-buy-button'>Purchase unavailable</div>
+  </body>
+</html>

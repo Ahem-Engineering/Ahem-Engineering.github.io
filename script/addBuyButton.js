@@ -1,3 +1,7 @@
+var script = document.createElement('script');
+script.src = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+document.getElementsByTagName('head')[0].appendChild(script);
+
 function addBuyButtonToId(html_id, product_id) {
   console.log("adding buy button (" + product_id + ") to " + html_id);
   pullJSON (

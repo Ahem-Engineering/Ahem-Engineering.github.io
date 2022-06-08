@@ -29,6 +29,11 @@
       "author": "Sparkfun",
       "url": "https://github.com/sparkfun/SparkFun_External_EEPROM_Arduino_Library",
       "recommended": false
+    },
+    {
+      "author": "wvmarle",
+      "url": "https://github.com/wvmarle/24LC256",
+      "recommended": false
     }
   ],
   "pinout": [

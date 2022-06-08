@@ -1,1 +1,61 @@
-
+{
+  "id" : "7651574513885",
+  "datasheet": [
+    {
+      "part" : "BMP280",
+      "description" : "Barometric pressure sensor",
+      "main-ic" : true,
+      "manufacturer": [
+        {
+          "markings" : "### KL/### KM",
+          "author": "Bosch Sensortec",
+          "url": "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp280-ds001.pdf"
+        }
+      ]
+    }
+  ],
+  "library": [
+    { 
+      "author": "Adafruit",
+      "url": "https://github.com/adafruit/Adafruit_BMP280_Library",
+      "recommended": false
+    },
+    {
+      "author": "Seeed Studio",
+      "url": "https://github.com/Seeed-Studio/Grove_BMP280",
+      "recommended": false
+    }
+  ],
+  "pinout": [
+    {
+      "pin" : 1,
+      "name" : "VCC",
+      "description" : "3.3V power input"
+    },
+    {
+      "pin" : 2,
+      "name" : "GND",
+      "description" : "Circuit ground"
+    },
+    {
+      "pin" : 3,
+      "name" : "SCL",
+      "description" : "<p><b>I2C</b>&nbsp;-&nbsp;SCK, Clock</p><p><b>SPI</b>&nbsp;-&nbsp;Chip Select, CS</p>"
+    },
+    {
+      "pin" : 4,
+      "name" : "SDA",
+      "description" : "<p><b>I2C</b>&nbsp;-&nbsp;SDA, data</p><p><b>SPI</b>&nbsp;-&nbsp;Serial data In, MOSI</p>"
+    },
+    {
+      "pin" : 5,
+      "name" : "CSB",
+      "description" : "<p><b>I2C</b>&nbsp;-&nbsp;V_DDIO</p><p><b>SPI</b>&nbsp;-&nbsp;Chip Select, CS</p>"
+    },
+    {
+      "pin" : 6,
+      "name" : "SDO",
+      "description" : "<p><b>I2C</b>&nbsp;-&nbsp;Address selection - LOW 0x76, HIGH 0x77</p><p><b>SPI</b>Serial data Out, MISO</p>"
+    }
+  ]
+}

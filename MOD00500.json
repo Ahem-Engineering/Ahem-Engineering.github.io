@@ -1,0 +1,61 @@
+{
+  "id" : "7706677936349",
+  "datasheet": [
+    {
+      "part" : "W25Q32FV",
+      "description" : "32 Mega-bit Serial Flash",
+      "main-ic" : true,
+      "manufacturer": [
+        {
+          "markings" : "25Q32FVSIG",
+          "author": "Winbond",
+          "url": "https://www.winbond.com/resource-files/w25q32fv%20revj%2006032016.pdf"
+        }
+      ]
+    }
+  ],
+  "library": [
+    { 
+      "author": "Marzogh",
+      "url": "https://github.com/Marzogh/SPIMemory",
+      "recommended": false
+    },
+    {
+      "author": "Rinky-Dink Electronics",
+      "url": "http://www.rinkydinkelectronics.com/library.php?id=65",
+      "recommended": false
+    }
+  ],
+  "pinout": [
+    {
+      "pin" : 1,
+      "name" : "VCC",
+      "description" : "3.3V Power input"
+    },
+    {
+      "pin" : 2,
+      "name" : "CS",
+      "description" : "CS, Chip select"
+    },
+    {
+      "pin" : 3,
+      "name" : "DO",
+      "description" : "MISO, Serial out"
+    },
+    {
+      "pin" : 4,
+      "name" : "GND",
+      "description" : "Device ground"
+    },
+    {
+      "pin" : 5,
+      "name" : "CLK",
+      "description" : "CLK, Clock"
+    },
+    {
+      "pin" : 6,
+      "name" : "DI",
+      "description" : "MOSI, Serial in"
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 {
   "id" : "7699294945501",
+  "starter": "note: When selecting a library ones for ADPS9960 will work, however the ADPS9930 (this device) does not have RGB light detection, and can only do one dimension gestures",
   "datasheet": [
     {
       "part" : "APDS 9930",

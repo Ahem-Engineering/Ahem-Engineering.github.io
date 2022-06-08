@@ -1,0 +1,61 @@
+{
+  "id" : "7699281412317",
+  "datasheet": [
+    {
+      "part" : "24C256",
+      "description" : "EEPROM",
+      "main-ic" : true,
+      "manufacturer": [
+        {
+          "markings" : "ATML$### 2EC$ CN #######",
+          "author": "Microchip Technology",
+          "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/AT24C128C-AT24C256C-Data-Sheet-DS20006270B.pdf"
+        }
+      ]
+    }
+  ],
+  "library": [
+    { 
+      "author": "Rob Tillaart",
+      "url": "https://github.com/RobTillaart/I2C_EEPROM",
+      "recommended": false
+    },
+    {
+      "author": "Dan Tudose",
+      "url": "https://github.com/dantudose/AT24C256",
+      "recommended": false
+    },
+    {
+      "author": "Sparkfun",
+      "url": "https://github.com/sparkfun/SparkFun_External_EEPROM_Arduino_Library",
+      "recommended": false
+    },
+    {
+      "author": "wvmarle",
+      "url": "https://github.com/wvmarle/24LC256",
+      "recommended": false
+    }
+  ],
+  "pinout": [
+    {
+      "pin" : 1,
+      "name" : "VCC",
+      "description" : "3.3V power input"
+    },
+    {
+      "pin" : 2,
+      "name" : "GND",
+      "description" : "Circuit ground"
+    },
+    {
+      "pin" : 3,
+      "name" : "SCL",
+      "description" : "SCK, Clock"
+    },
+    {
+      "pin" : 4,
+      "name" : "SDA",
+      "description" : "SDA, data"
+    }
+  ]
+}

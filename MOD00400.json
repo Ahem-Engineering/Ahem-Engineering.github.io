@@ -1,15 +1,15 @@
 {
-  "id" : "7699281412317",
+  "id" : "7699294945501",
   "datasheet": [
     {
-      "part" : "24C256",
-      "description" : "EEPROM",
+      "part" : "APDS 9930",
+      "description" : "Digital proximity and ambient light sensor",
       "main-ic" : true,
       "manufacturer": [
         {
-          "markings" : "ATML$### 2EC$ CN #######",
-          "author": "Microchip Technology",
-          "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/AT24C128C-AT24C256C-Data-Sheet-DS20006270B.pdf"
+          "markings" : "-",
+          "author": "Broadcom",
+          "url": "https://docs.broadcom.com/wcs-public/products/data-sheets--technical-specifications/data-sheet/736/749/av02-3190en_ds_apds-9930_2015-11-13.pdf"
         }
       ]
     }
@@ -39,8 +39,8 @@
   "pinout": [
     {
       "pin" : 1,
-      "name" : "VCC",
-      "description" : "3.3V power input"
+      "name" : "VL",
+      "description" : "?"
     },
     {
       "pin" : 2,
@@ -49,13 +49,23 @@
     },
     {
       "pin" : 3,
+      "name" : "VCC",
+      "description" : "Power in"
+    },
+    {
+      "pin" : 4,
       "name" : "SCL",
       "description" : "SCK, Clock"
     },
     {
-      "pin" : 4,
+      "pin" : 5,
       "name" : "SDA",
       "description" : "SDA, data"
+    },
+    {
+      "pin" : 6,
+      "name" : "INT",
+      "description" : "Data ready interrupt"
     }
   ]
 }

@@ -55,7 +55,7 @@
     {
       "pin" : 6,
       "name" : "SDO",
-      "description" : "<p><b>I2C</b>&nbsp;-&nbsp;Address selection - LOW 0x76, HIGH 0x77</p><p><b>SPI</b>Serial data Out, MISO</p>"
+      "description" : "<p><b>I2C</b>&nbsp;-&nbsp;I2C Address select - LOW: 0x76, HIGH: 0x77</p><p><b>SPI</b>Serial data Out, MISO</p>"
     }
   ]
 }

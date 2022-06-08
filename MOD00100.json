@@ -79,7 +79,7 @@
     {
       "pin" : 6,
       "name" : "SA0",
-      "description" : "I2C Address select"
+      "description" : "I2C Address select - LOW: 0x1C, HIGH: 0x1D"
     },
     {
       "pin" : 7,

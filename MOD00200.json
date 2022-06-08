@@ -50,7 +50,7 @@
     {
       "pin" : 5,
       "name" : "CSB",
-      "description" : "<p><b>I2C</b>&nbsp;-&nbsp;V_DDIO</p><p><b>SPI</b>&nbsp;-&nbsp;CS, Chip Select (active LOW)</p>"
+      "description" : "<p><b>I2C</b>&nbsp;-&nbsp;Do not connect/use PULL UP resistor</p><p><b>SPI</b>&nbsp;-&nbsp;CS, Chip Select (active LOW)</p>"
     },
     {
       "pin" : 6,

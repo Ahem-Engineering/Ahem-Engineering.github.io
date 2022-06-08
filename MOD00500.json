@@ -1,5 +1,14 @@
 {
   "id" : "7706677936349",
+  "specs": [
+    { "name" : "Length", "value" : "x mm" },
+    { "name" : "Width", "value" : "x mm" },
+    { "name" : "Operating Voltage", "value" : "3.3 VDC" },
+    { "name" : "Maximum speed", "value" : "104 MHz" },
+    { "name" : "Interface", "value" : "SPI" },
+    { "name" : "Total memory", "value" : "32 Megabits (16,384 pages &times; 256 bytes)" },
+    { "name" : "Additional features", "value" : "<ul><li>Sector/Block erase</li><li>Dual SPI capable</li><li>Unique ID</li></ul>" }
+  ],
   "datasheet": [
     {
       "part" : "W25Q32FV",

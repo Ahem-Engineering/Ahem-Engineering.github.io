@@ -1,0 +1,55 @@
+{
+  "id" : "###########",
+  "specs": [
+    { "name" : "Length", "value" : "x mm" },
+    { "name" : "Width", "value" : "x mm" },
+    { "name" : "Operating Voltage", "value" : "3.3 VDC" },
+    { "name" : "Maximum speed", "value" : "104 MHz" },
+    { "name" : "Interface", "value" : "SPI" },
+    { "name" : "Total memory", "value" : "32 Megabits (16,384 pages &times; 256 bytes)" },
+    { "name" : "Additional features", "value" : "xxx" }
+  ],
+  "datasheet": [
+    {
+      "part" : "PPPP",
+      "description" : "DDDD",
+      "main-ic" : true,
+      "manufacturer": [
+        {
+          "markings" : "zzzzz xxxx yyyy",
+          "author": "aaaa",
+          "url": "https://zzzz.pdf"
+        }
+      ]
+    }
+  ],
+  "library": [
+    { 
+      "author": "AAA",
+      "url": "https://aaa",
+      "recommended": false
+    },
+    {
+      "author": "BBB",
+      "url": "http://bbb",
+      "recommended": false
+    }
+  ],
+  "pinout": [
+    {
+      "pin" : 1,
+      "name" : "VCC",
+      "description" : "Power input"
+    },
+    {
+      "pin" : 2,
+      "name" : "OUT",
+      "description" : "Signal output"
+    },
+    {
+      "pin" : 3,
+      "name" : "GND",
+      "description" : "Device ground"
+    }
+  ]
+}

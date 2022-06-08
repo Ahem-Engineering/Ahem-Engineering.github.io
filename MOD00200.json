@@ -40,22 +40,22 @@
     {
       "pin" : 3,
       "name" : "SCL",
-      "description" : "<p><b>I2C</b>&nbsp;-&nbsp;SCK, Clock</p><p><b>SPI</b>&nbsp;-&nbsp;Chip Select, CS</p>"
+      "description" : "<p><b>I2C</b>&nbsp;-&nbsp;SCK, Clock</p><p><b>SPI</b>&nbsp;-&nbsp;CLK, Clock</p>"
     },
     {
       "pin" : 4,
       "name" : "SDA",
-      "description" : "<p><b>I2C</b>&nbsp;-&nbsp;SDA, data</p><p><b>SPI</b>&nbsp;-&nbsp;Serial data In, MOSI</p>"
+      "description" : "<p><b>I2C</b>&nbsp;-&nbsp;SDA, data</p><p><b>SPI</b>&nbsp;-&nbsp;MOSI, Serial data In</p>"
     },
     {
       "pin" : 5,
       "name" : "CSB",
-      "description" : "<p><b>I2C</b>&nbsp;-&nbsp;V_DDIO</p><p><b>SPI</b>&nbsp;-&nbsp;Chip Select, CS</p>"
+      "description" : "<p><b>I2C</b>&nbsp;-&nbsp;V_DDIO</p><p><b>SPI</b>&nbsp;-&nbsp;CS, Chip Select (active LOW)</p>"
     },
     {
       "pin" : 6,
       "name" : "SDO",
-      "description" : "<p><b>I2C</b>&nbsp;-&nbsp;I2C Address select - LOW: 0x76, HIGH: 0x77</p><p><b>SPI</b>Serial data Out, MISO</p>"
+      "description" : "<p><b>I2C</b>&nbsp;-&nbsp;I2C Address select<br>LOW: 0x76, HIGH: 0x77</p><p><b>SPI</b>&nbsp;-&nbsp;MISO, Serial data Out</p>"
     }
   ]
 }

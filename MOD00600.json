@@ -1,0 +1,55 @@
+{
+  "id" : "7705605013725",
+  "specs": [
+    { "name" : "Length", "value" : "x mm" },
+    { "name" : "Width", "value" : "x mm" },
+    { "name" : "Operating Voltage", "value" : "5 VDC" },
+    { "name" : "Maximum current", "value" : "&plusmn;5 A" },
+    { "name" : "Sensitivity", "value" : "185 mV/A" },
+    { "name" : "Output", "value" : "Analogue" },
+    { "name" : "Resistance", "value" : "1.2 m&Omega;" }
+  ],
+  "datasheet": [
+    {
+      "part" : "ACS712ELC",
+      "description" : "5 Amp",
+      "main-ic" : true,
+      "manufacturer": [
+        {
+          "markings" : "",
+          "author": "Allegro Microsystems",
+          "url": "https://www.allegromicro.com/-/media/files/datasheets/acs712-datasheet.pdf"
+        }
+      ]
+    }
+  ],
+  "library": [
+    { 
+      "author": "Rob Tillaart",
+      "url": "https://github.com/RobTillaart/ACS712",
+      "recommended": false
+    },
+    {
+      "author": "rkoptev",
+      "url": "https://github.com/rkoptev/ACS712-arduino",
+      "recommended": false
+    }
+  ],
+  "pinout": [
+    {
+      "pin" : 1,
+      "name" : "VCC",
+      "description" : "Power input"
+    },
+    {
+      "pin" : 2,
+      "name" : "OUT",
+      "description" : "Signal output"
+    },
+    {
+      "pin" : 3,
+      "name" : "GND",
+      "description" : "Device ground"
+    }
+  ]
+}

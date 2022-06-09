@@ -2,14 +2,14 @@
   <head>
     <script src="https://git.ahem.net.au/script/qrcode.js"></script>
     <script>
-      QRCode(document.getElementById('qr-code'), {
-        width : 100,
-        height : 100
-      }).makeCode(URLSearchParams(window.location.search).get('url'));
+      const params = new URLSearchParams(window.location.search);
+      var qrcode = new QRCode(document.getElementById("qr"), { width : 100, height : 100 });
+      
+      qrcode.makeCode(params.get('url'));
     </script>
   </head>
   <body>
-    <div id="qr-code"></div>
+    <div id="qr"></div>
   </body>
 </html>
   

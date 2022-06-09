@@ -2,7 +2,10 @@
   <head>
     <script src="https://github.com/davidshimjs/qrcodejs/blob/master/qrcode.min.js"></script>
     <script>
-      
+      QRCode(document.getElementById('qr-code'), {
+        width : 100,
+        height : 100
+      }).makeCode(URLSearchParams(window.location.search).get('url'));
     </script>
   </head>
   <body>

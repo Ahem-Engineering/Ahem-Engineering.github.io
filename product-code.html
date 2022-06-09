@@ -54,6 +54,7 @@
       qrcode.makeCode(product_url);
       
       JsBarcode("#barcode", ahemcode, {
+        format: "CODE128A",
         width: 3,
         height: 100,
         text: ahemcode

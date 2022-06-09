@@ -1,6 +1,8 @@
 <html>
   <head>
     <title>Ahem Engineering - Product tag generator</title>
+    
+    <script src="https://git.ahem.net.au/script/pull.js"></script>
     <script src="https://git.ahem.net.au/script/qrcode.js"></script>
     <script src="https://git.ahem.net.au/script/JsBarcode.js"></script>
     <script src="https://sdks.shopifycdn.com/js-buy-sdk/v2/latest/index.umd.min.js"></script>
@@ -23,42 +25,52 @@
       </tbody>
     </table>
     <script>
-    // get parameter - product code
-    const params = new URLSearchParams(window.location.search);
-    const ahemcode = params.get('product_code');
+      // get parameter - product code
+      const params = new URLSearchParams(window.location.search);
+      const ahemcode = params.get('product_code');
 
-    // prepare Anew QRCode to fill element id="qrcode"
-    var qr_element = document.getElementById("qrcode");
-    var qrcode = new QRCode(qr_element, { width : 100, height : 100 });
-    
-    // prepare ShopifyBuy client
-    var client = ShopifyBuy.buildClient(
-      {
-        domain: 'ahem-engineering.myshopify.com',
-        storefrontAccessToken: 'c43dd5285b9eaf2ce09081222ee4c393',
-      }
-    );
-    
-    // format request for ShopifyBuy
-    var product_request = btoa('gid://shopify/Product/'+"7698399953117");
-    
-    client.product.fetch(product_request).then((product) => {
-      document.getElementById('product-name').innerHTML = product.title;
-      
-      var product_anchor = document.getElementById('productURL');
-      var product_url = "http://shop.ahem.net.au/products/" + product.handle;
-      
-      product_anchor.innerHTML = product_url;
-      product_anchor.href = product_url;
-      
-      qrcode.makeCode(product_url);
-      
-      JsBarcode("#barcode", ahemcode, {
-        format: "CODE128A",
-        width: 3,
-        height: 100,
-        text: ahemcode
-      });
-    });
+      // prepare Anew QRCode to fill element id="qrcode"
+      var qr_element = document.getElementById("qrcode");
+      var qrcode = new QRCode(qr_element, { width : 100, height : 100 });
+
+      // prepare ShopifyBuy client
+      var client = ShopifyBuy.buildClient(
+        {
+          domain: 'ahem-engineering.myshopify.com',
+          storefrontAccessToken: 'c43dd5285b9eaf2ce09081222ee4c393',
+        }
+      );
+
+      pullJSON(
+        'https://git.ahem.net.au/MOD00700.json',
+        function (data) {
+          // format request for ShopifyBuy
+          var product_request = btoa('gid://shopify/Product/' + data.id);
+          client.product.fetch(product_request).then(
+            function (product) {
+              document.getElementById('product-name').innerHTML = product.title;
+
+              var product_anchor = document.getElementById('productURL');
+              var product_url = "http://shop.ahem.net.au/products/" + product.handle;
+
+              product_anchor.innerHTML = product_url;
+              product_anchor.href = product_url;
+
+              qrcode.makeCode(product_url);
+
+              JsBarcode(
+                "#barcode", 
+                ahemcode, 
+                {
+                  format: "CODE128A",
+                  width: 3,
+                  height: 100,
+                  text: ahemcode
+                }
+              );
+            }
+          );
+        }
+      );
     </script>
   </body>

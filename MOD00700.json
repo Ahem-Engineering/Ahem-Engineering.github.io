@@ -1,0 +1,91 @@
+{
+  "id" : "7705605013725",
+  "specs": [
+    { "name" : "Length", "value" : "x mm" },
+    { "name" : "Width", "value" : "x mm" },
+    { "name" : "Operating Voltage", "value" : "3.3 VDC" },
+    { "name" : "Maximum distance", "value" : "100 mm - 600 mm (depending on accuracy)" },
+    { "name" : "Laser emitter wavelength", "value" : "850 nm",
+    { "name" : "Interface", "value" : "I2C" }
+  ],
+  "datasheet": [
+    {
+      "part" : "VL6180X",
+      "description" : "Time of flight proximity, gesture and ambient light sensing module",
+      "main-ic" : true,
+      "manufacturer": [
+        {
+          "markings" : "",
+          "author": "STMicroelectronics",
+          "url": "https://www.st.com/resource/en/datasheet/vl6180x.pdf"
+        }
+      ]
+    },
+    {
+      "part" : "XC6206",
+      "description" : "2.8 VDC Regulator",
+      "main-ic" : false,
+      "manufacturer": [
+        {
+          "markings" : "65X?",
+          "author": "Torex Semiconductor",
+          "url": "https://www.torexsemi.com/file/xc6206/XC6206.pdf"
+        }
+      ]
+    }
+  ],
+  "library": [
+    { 
+      "author": "Pololu",
+      "url": "https://github.com/pololu/vl6180x-arduino",
+      "recommended": false
+    },
+    {
+      "author": "Adafruit",
+      "url": "https://github.com/adafruit/Adafruit_VL6180X",
+      "recommended": false
+    },
+    {
+      "author": "Sparkfun",
+      "url": "https://github.com/sparkfun/SparkFun_ToF_Range_Finder-VL6180_Arduino_Library",
+      "recommended": false
+    }
+  ],
+  "pinout": [
+    {
+      "pin" : 1,
+      "name" : "VIN",
+      "description" : "Unregulated power input"
+    },
+    {
+      "pin" : 2,
+      "name" : "2v8",
+      "description" : "2.8 VDC regulated output"
+    },
+    {
+      "pin" : 3,
+      "name" : "GND",
+      "description" : "Device ground"
+    },
+    {
+      "pin" : 4,
+      "name" : "GPIO",
+      "description" : "Device interrupt output"
+    },
+    {
+      "pin" : 5,
+      "name" : "SHDN",
+      "description" : "Device shutdown"
+    },
+    {
+      "pin" : 6,
+      "name" : "SCL",
+      "description" : "I2C, Serial Clock"
+    },
+    {
+      "pin" : 7,
+      "name" : "SDA",
+      "description" : "I2C, Serial Data"
+    }
+  ]
+}

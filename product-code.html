@@ -4,6 +4,24 @@
     <script src="https://git.ahem.net.au/script/qrcode.js"></script>
     <script src="https://git.ahem.net.au/script/JsBarcode.js"></script>
     <script src="https://sdks.shopifycdn.com/js-buy-sdk/v2/latest/index.umd.min.js"></script>
+    
+  </head>
+  
+  <body>
+    <table>
+      <tbody>
+        <tr>
+          <th colspan="2"><div id="product-name"></div></th>
+        </tr>
+        <tr>
+          <td style="width: 100px"><div id="barcode"></div></td>
+          <td style="width: 120px"><div id="qrcode"></div></td>
+        </tr>
+        <tr>
+          <td colspan="2"><a id='productURL' href=''></a></td>
+        </tr>
+      </tbody>
+    </table>
     <script>
     // get parameter - product code
     const params = new URLSearchParams(window.location.search);
@@ -40,25 +58,6 @@
         height: 100,
         text: ahemcode
       });
-    
     });
-    
     </script>
-  </head>
-  
-  <body>
-    <table>
-      <tbody>
-        <tr>
-          <th colspan="2"><div id="product-name"></div></th>
-        </tr>
-        <tr>
-          <td style="width: 100px"><div id="barcode"></div></td>
-          <td style="width: 120px"><div id="qrcode"></div></td>
-        </tr>
-        <tr>
-          <td colspan="2"><a id='productURL' href=''></a></td>
-        </tr>
-      </tbody>
-    </table>
   </body>

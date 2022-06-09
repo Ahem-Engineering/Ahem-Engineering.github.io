@@ -9,8 +9,8 @@
     const params = new URLSearchParams(window.location.search);
     const ahemcode = params.get('product_code');
 
-    // prepare new QRCode to fill element id="qrcode"
-    const qr_element = document.getElementById("qrcode");
+    // prepare Anew QRCode to fill element id="qrcode"
+    var qr_element = document.getElementById("qrcode");
     var qrcode = new QRCode(qr_element, { width : 100, height : 100 });
     
     // prepare ShopifyBuy client
@@ -22,12 +22,12 @@
     );
     
     // format request for ShopifyBuy
-    const product_request = btoa('gid://shopify/Product/'+"7698399953117");
+    var product_request = btoa('gid://shopify/Product/'+"7698399953117");
     
     client.product.fetch(product_request).then((product) => {
       document.getElementById('product-name').innerHTML = product.title;
       
-      const product_anchor = document.getElementById('productURL');
+      var product_anchor = document.getElementById('productURL');
       var product_url = "http://shop.ahem.net.au/products/" + product.handle;
       
       product_anchor.innerHTML = product_url;

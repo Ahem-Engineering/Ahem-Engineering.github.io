@@ -42,7 +42,7 @@
       );
 
       pullJSON(
-        'https://git.ahem.net.au/MOD00700.json',
+        'https://git.ahem.net.au/' + ahemcode + '.json',
         function (data) {
           // format request for ShopifyBuy
           var product_request = btoa('gid://shopify/Product/' + data.id);

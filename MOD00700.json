@@ -5,7 +5,7 @@
     { "name" : "Width", "value" : "x mm" },
     { "name" : "Operating Voltage", "value" : "3.3 VDC" },
     { "name" : "Maximum distance", "value" : "100 mm - 600 mm (depending on accuracy)" },
-    { "name" : "Laser emitter wavelength", "value" : "850 nm",
+    { "name" : "Laser emitter wavelength", "value" : "850 nm"},
     { "name" : "Interface", "value" : "I2C" }
   ],
   "datasheet": [

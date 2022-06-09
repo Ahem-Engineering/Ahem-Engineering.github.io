@@ -16,13 +16,8 @@
   ],
   "library": [
     { 
-      "author": "Adafruit",
-      "url": "https://github.com/adafruit/Adafruit_BMP280_Library",
-      "recommended": false
-    },
-    {
-      "author": "Seeed Studio",
-      "url": "https://github.com/Seeed-Studio/Grove_BMP280",
+      "author": "Arduino built-in (no library)",
+      "url": "https://www.arduino.cc/reference/en/language/functions/digital-io/digitalread/",
       "recommended": false
     }
   ],

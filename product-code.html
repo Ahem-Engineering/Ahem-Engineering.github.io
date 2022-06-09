@@ -34,7 +34,7 @@
       
       qrcode.makeCode(product_url);
       
-      JSBarcode("#barcode", ahemcode, {
+      JsBarcode("#barcode", ahemcode, {
         width: 3,
         height: 100,
         text: ahemcode
@@ -48,9 +48,9 @@
   <body>
     <table>
       <tbody>
-        <th>
-          <td colspan="2"><div id="product-name"></div></td>
-        </th>
+        <tr>
+          <th colspan="2"><div id="product-name"></div></th>
+        </tr>
         <tr>
           <td style="width: 100px"><div id="barcode"></div></td>
           <td style="width: 120px"><div id="qrcode"></div></td>

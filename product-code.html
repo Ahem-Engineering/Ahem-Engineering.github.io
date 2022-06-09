@@ -10,7 +10,8 @@
     const ahemcode = params.get('product_code');
 
     // prepare new QRCode to fill element id="qrcode"
-    var qrcode = new QRCode(document.getElementById("qrcode"), { width : 100, height : 100 });
+    const qr_element = document.getElementById("qrcode");
+    var qrcode = new QRCode(qr_element, { width : 100, height : 100 });
     
     // prepare ShopifyBuy client
     var client = ShopifyBuy.buildClient(

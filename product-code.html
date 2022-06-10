@@ -16,8 +16,8 @@
           <th colspan="2" style="width: 100mm;"><b style="font-size: 6mm;" id="product-name"></b></th>
         </tr>
         <tr>
-          <td style="width: 50mm;"><svg id="barcode"></svg></td>
-          <td style="width: 50mm;"><div id="qrcode"></div></td>
+          <td style="width: 60mm;"><svg id="barcode"></svg></td>
+          <td style="width: 40mm;"><div id="qrcode"></div></td>
         </tr>
         <tr>
           <td colspan="2" style="width: 100%; text-align: center;"><a id='productURL' style="font-size: 4mm;" href=''></a></td>
@@ -31,7 +31,7 @@
 
       // prepare Anew QRCode to fill element id="qrcode"
       var qr_element = document.getElementById("qrcode");
-      var qrcode = new QRCode(qr_element, { width : 40, height : 40 });
+      var qrcode = new QRCode(qr_element, { width : 80, height : 80 });
 
       // prepare ShopifyBuy client
       var client = ShopifyBuy.buildClient(
@@ -64,8 +64,9 @@
                 {
                   format: "CODE128",
                   width: 1.5,
-                  height: 30,
-                  text: ahemcode
+                  height: 80,
+                  text: ahemcode,
+                  fontSize: 12
                 }
               );
             }

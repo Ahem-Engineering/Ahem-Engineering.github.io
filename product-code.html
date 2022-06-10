@@ -13,7 +13,7 @@
     <table>
       <tbody>
         <tr>
-          <th colspan="2" style="width: 200px"><b id="product-name"></b></th>
+          <th colspan="2" style="width: 200mm"><b id="product-name"></b></th>
         </tr>
         <tr>
           <td style="width: 100px"><svg id="barcode"></svg></td>
@@ -31,7 +31,7 @@
 
       // prepare Anew QRCode to fill element id="qrcode"
       var qr_element = document.getElementById("qrcode");
-      var qrcode = new QRCode(qr_element, { width : 100, height : 100 });
+      var qrcode = new QRCode(qr_element, { width : 200, height : 50 });
 
       // prepare ShopifyBuy client
       var client = ShopifyBuy.buildClient(
@@ -63,8 +63,8 @@
                 "ahem " + ahemcode, 
                 {
                   format: "CODE128",
-                  width: 1,
-                  height: 70,
+                  width: 2,
+                  height: 30,
                   text: ahemcode
                 }
               );

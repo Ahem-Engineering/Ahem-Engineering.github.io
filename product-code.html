@@ -31,7 +31,7 @@
 
       // prepare Anew QRCode to fill element id="qrcode"
       var qr_element = document.getElementById("qrcode");
-      var qrcode = new QRCode(qr_element, { width : 200, height : 50 });
+      var qrcode = new QRCode(qr_element, { width : 50, height : 50 });
 
       // prepare ShopifyBuy client
       var client = ShopifyBuy.buildClient(
@@ -63,7 +63,7 @@
                 "ahem " + ahemcode, 
                 {
                   format: "CODE128",
-                  width: 2,
+                  width: 1.5,
                   height: 30,
                   text: ahemcode
                 }

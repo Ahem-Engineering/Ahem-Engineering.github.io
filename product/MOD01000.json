@@ -1,1 +1,57 @@
-
+{
+  "id" : "7710449860829",
+  "specs": [
+    { "name" : "Length", "value" : "x mm" },
+    { "name" : "Width", "value" : "x mm" },
+    { "name" : "Operating Voltage", "value" : "3.3 - 5 VDC" },
+    { "name" : "Operating frequency", "value" : "40 kHz" },
+    { "name" : "Interface", "value" : "GPIO" },
+    { "name" : "Range", "value" : "60 - 8500 mm" },
+    { "name" : "Accuracy", "value" : "3 mm" },
+    { "name" : "Measurement angle", "value" : "15&deg;" }
+  ],
+  "library": [
+    { 
+      "author": "gamegine",
+      "url": "https://github.com/gamegine/HCSR04-ultrasonic-sensor-lib",
+      "recommended": false
+    },
+    {
+      "author": "Dirk Sarodnick",
+      "url": "https://github.com/d03n3rfr1tz3/HC-SR04",
+      "recommended": false
+    },
+    {
+      "author": "Martinsos",
+      "url": "https://github.com/Martinsos/arduino-lib-hc-sr04",
+      "recommended": false
+    },
+    {
+      "author": "bbkbarbar",
+      "url": "https://github.com/bbkbarbar/Arduino-HC-SR04-library",
+      "recommended": false
+    }
+  ],
+  "pinout": [
+    {
+      "pin" : 1,
+      "name" : "Vcc",
+      "description" : "Power input"
+    },
+    {
+      "pin" : 2,
+      "name" : "Trig",
+      "description" : "Trigger signal"
+    },
+    {
+      "pin" : 3,
+      "name" : "Echo",
+      "description" : "Return echo signal"
+    },
+    {
+      "pin" : 4,
+      "name" : "Gnd",
+      "description" : "Device ground"
+    }
+  ]
+}

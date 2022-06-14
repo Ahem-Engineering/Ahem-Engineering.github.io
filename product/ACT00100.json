@@ -1,1 +1,35 @@
-
+{
+  "id" : "7698405949661",
+  "specs": [
+    { "name" : "Length", "value" : "x mm" },
+    { "name" : "Width", "value" : "x mm" },
+    { "name" : "Operating Voltage", "value" : "5 VDC" },
+    { "name" : "Wavelength", "value" : "650 nm" },
+    { "name" : "Interface", "value" : "GPIO" },
+    { "name" : "Power output", "value" : "&lt; 1 mW" }
+  ],
+  "library": [
+    { 
+      "author": "Arduino (No library)",
+      "url": "https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/",
+      "recommended": false
+    }
+  ],
+  "pinout": [
+    {
+      "pin" : 1,
+      "name" : "-",
+      "description" : "Module Ground"
+    },
+    {
+      "pin" : 2,
+      "name" : "unmarked",
+      "description" : "Power input"
+    },
+    {
+      "pin" : 3,
+      "name" : "S",
+      "description" : "Laser on/off"
+    }
+  ]
+}

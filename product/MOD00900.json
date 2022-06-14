@@ -56,6 +56,6 @@
       "pin" : 6,
       "name" : "NO",
       "description" : "Normally open (connects to COM when IN is HIGH)"
-    },
+    }
   ]
 }

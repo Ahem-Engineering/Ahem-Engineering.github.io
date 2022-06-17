@@ -1,0 +1,60 @@
+{
+  "id" : "7698408833245",
+  "specs": [
+    { "name" : "Length", "value" : "x mm" },
+    { "name" : "Width", "value" : "x mm" },
+    { "name" : "Operating Voltage", "value" : "3.3 - 5 VDC" },
+    { "name" : "Carrier frequency", "value" : "38 kHz" },
+    { "name" : "Interface", "value" : "GPIO (bit stream)" }
+  ],
+  "datasheet": [
+    {
+      "part" : "TL1838",
+      "description" : "38 kHz IR Remote decoder",
+      "main-ic" : true,
+      "manufacturer": [
+        {
+          "markings" : "1838",
+          "author": "Unknown Chinese Manufacturer",
+          "url": "https://git.ahem.net.au/datasheet/Infrared%20receiver%20vs1838b.pdf"
+        }
+      ]
+    },
+    {
+      "part" : "TL1838",
+      "description" : "IR Receiver Modules for Remote Control Systems",
+      "main-ic" : true,
+      "manufacturer": [
+        {
+          "markings" : "TSOP18338",
+          "author": "Vishay",
+          "url": "https://www.vishay.com/docs/82802/tsop181.pdf"
+        }
+      ]
+    }
+  ],
+  "library": [
+    { 
+      "author": "Ken Shirriff, Rafi Khan & Armin Joachimsmeyer",
+      "url": "https://github.com/Arduino-IRremote/Arduino-IRremote",
+      "recommended": false
+    }
+  ],
+  "pinout": [
+    {
+      "pin" : 1,
+      "name" : "-",
+      "description" : "Device ground"
+    },
+    {
+      "pin" : 2,
+      "name" : "",
+      "description" : "Power input"
+    },
+    {
+      "pin" : 3,
+      "name" : "S",
+      "description" : "Signal output"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "id" : "7705617105117",
+  "specs": [
+    { "name" : "Length", "value" : "x mm" },
+    { "name" : "Width", "value" : "x mm" },
+    { "name" : "Operating Voltage", "value" : "3.3 - 5 VDC" },
+    { "name" : "Spectral Peak", "value" : "540 nm" },
+    { "name" : "Interface", "value" : "GPIO" },
+    { "name" : "Maximum Rise Time", "value" : "30 ms" },
+    { "name" : "Maximum Decay Time", "value" : "40 ms" }
+  ],
+	"notes" : [
+		"Adjust the light level switching point using the potentiometer."
+	]
+  "datasheet": [
+    {
+      "part" : "CdS Cell",
+      "description" : "Photoresistor using a Cadmium Sulfide cell (CdS)",
+      "main-ic" : true,
+      "manufacturer": [
+        {
+          "markings" : "",
+          "author": "Token",
+          "url": "http://www.token.com.tw/pdf/light-sensors/cds-resistor-pgm.pdf"
+        },
+        {
+          "markings" : "",
+          "author": "Advanced Photonix, Inc.",
+          "url": "https://www.electroschematics.com/wp-content/uploads/2012/12/PDV-P8103-ldr.pdf"
+        }
+      ]
+    },
+    {
+      "part" : "LM393",
+      "description" : "Low-Power, Low-Offset Voltage, Dual Comparators",
+      "main-ic" : false,
+      "manufacturer": [
+        {
+          "markings" : "LM393 ##M",
+          "author": "Texas Instruments",
+          "url": "https://www.ti.com/lit/ds/symlink/lm393-n.pdf"
+        }
+      ]
+    }
+  ],
+  "library": [
+    { 
+      "author": "Arduino built-in (no library)",
+      "url": "https://www.arduino.cc/reference/en/language/functions/digital-io/digitalread/",
+      "recommended": false
+    }
+  ],
+  "pinout": [
+    {
+      "pin" : 1,
+      "name" : "DO",
+      "description" : "Signal output"
+    },
+    {
+      "pin" : 2,
+      "name" : "GND",
+      "description" : "Device ground"
+    },
+    {
+      "pin" : 3,
+      "name" : "VCC",
+      "description" : "Power input"
+    }
+  ]
+}

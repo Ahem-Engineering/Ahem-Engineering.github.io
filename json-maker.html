@@ -184,6 +184,8 @@
 						this.value.length > 8 ? 'Too long' : 
 						'OK'
 					">
+					<input type="button" value='Load' onclick="" disabled>
+					<input type="button" value="Reset" onclick="location.reload()">
 				<span id="product-code-error"></span>
 			</div>
 			<hr>
@@ -208,7 +210,6 @@
 			
 				<script>
 					function addNote(text = '') {
-						console.log('adding note..');
 						var node = appendNode('notes-container', 'more-notes');
 						node.children[0].value = text;
 					}
@@ -272,7 +273,7 @@
 						Description: <input type="text" class="datasheet-desc">
 						Main IC: <input type="checkbox" class="datasheet-main-ic">
 						<div id="manufacturer-container" class='datasheet-manf' style="padding-left: 50px;">
-							Manufacturers:
+							<b>Manufacturers:</b>
 							<input type="button" value="+" onclick="addManf(this.parentElement.id);">
 						</div>
 						<input type="button" value="remove datasheet" onclick="this.parentElement.remove();">
@@ -362,10 +363,12 @@
 	</body>
 
 	<script>
-  	var note = addNote('hello');
 		addSpec('Length');
 		addSpec('Width');
 		addSpec('Operating Voltage');
 		addSpec('Interface');
+		addLib();
+		addDatasheet();
+		addPin();
 	</script>
 </html>

@@ -1,13 +1,34 @@
 <html>
 	<head>
 		<script src='./script/json-make.js'></script>
+		
+		<style>
+		  .datasection {
+		    background-color: lightblue;
+		    padding-top: 5px;
+		    padding-bottom: 5px;
+		    border: 1px;
+		    border-color: black;
+		    border-style: solid;
+		    margin: 5px;
+		  }
+		  .datapoint {
+		    margin: 5px;
+		  }
+		</style>
+		
 		<script>
+	    var test = {};
 			function appendNode(container_id, template_id) {			
-				container = document.getElementById(container_id);
-				template = document.getElementById(template_id).content.children[0].innerHTML;
+				var container = document.getElementById(container_id);
+				var template = document.getElementById(template_id).content.children[0].innerHTML;
 				var newNode = document.createElement('div');
 				newNode.innerHTML = template;
+				newNode.className = 'datapoint';
 				container.appendChild(newNode);
+				
+				return newNode;
+				
 				//console.log(template_id + ' added to ' + container_id);
 			}
 		
@@ -45,8 +66,6 @@
 						}
 					}
 				}
-				
-
 			
 				// set datasheets
 				var datasheets = document.getElementsByClassName('datasheet-part');
@@ -168,7 +187,7 @@
 				<span id="product-code-error"></span>
 			</div>
 			<hr>
-			<div id="product-id-container">
+			<div id="product-id-container" class="datasection">
 				<b>Product ID:</b>
 				<input type="number" id="product-id" onkeyup="
 					document.getElementById('product-id-error').innerHTML = 
@@ -179,7 +198,7 @@
 				<span id="product-id-error"></span>
 			</div>
 		
-			<div id="notes-container">
+			<div id="notes-container" class="datasection">
 				<template id='more-notes'> 
 					<div>
 						<textarea class="note-data"></textarea>
@@ -188,9 +207,10 @@
 				</template>
 			
 				<script>
-					function addNote() {
+					function addNote(text = '') {
 						console.log('adding note..');
-						appendNode('notes-container', 'more-notes');
+						var node = appendNode('notes-container', 'more-notes');
+						node.children[0].value = text;
 					}
 				
 					// addNote();
@@ -201,7 +221,7 @@
 				<br>
 			</div>
 
-			<div id="specs-container">
+			<div id="specs-container" class="datasection">
 				<template id="more-specs"> 
 					<div>
 						<input type="text" class="spec-name">
@@ -211,11 +231,10 @@
 				</template>
 			
 				<script>
-					function addSpec(specName='') {
-						appendNode('specs-container', 'more-specs');
-						var specNames = document.getElementById('specs-container').getElementsByClassName('spec-name');
-						var i = specNames.length - 1;
-						specNames[i].value = specName;
+					function addSpec(specName='', specValue='') {
+						var node = appendNode('specs-container', 'more-specs');
+						node.children[0].value = specName;
+						node.children[1].value = specValue;
 					}
 				</script>
 
@@ -223,7 +242,7 @@
 				<input type="button" value="+" onclick="addSpec();">
 			</div>
 		
-			<div id="lib-container">
+			<div id="lib-container" class="datasection">
 				<template id="more-libs"> 
 					<div>
 						Author: <input type="text" class="lib-author">
@@ -234,8 +253,11 @@
 				</template>
 			
 				<script>
-					function addLib() {
-						appendNode('lib-container', 'more-libs');
+					function addLib(author='', url='', recommend=false) {
+						var node = appendNode('lib-container', 'more-libs');
+						node.children[0].value = author;
+						node.children[1].value = url;
+						node.children[2].checked = recommend;
 					}
 				</script>
 			
@@ -243,7 +265,7 @@
 				<input type="button" value="+" onclick="addLib();">
 			</div>
 			
-			<div id="datasheet-container">
+			<div id="datasheet-container" class="datasection">
 				<template id="more-datasheets"> 
 					<div>
 						Part: <input type="text" class="datasheet-part" onkeyup="this.parentElement.getElementsByTagName('div')[0].id = 'manufacturer-container'+this.value">
@@ -267,13 +289,37 @@
 				</template>
 			
 				<script>
-					function addDatasheet() {
-						appendNode('datasheet-container', 'more-datasheets');
-						addManf('manufacturer-container');
+					function addDatasheet(partName='', datasheetDesc='', mainIC=false, manufacturers=[]) {
+					  if (!manufacturers.length) manufacturers[0] = makeManf();
+					  
+						var node = appendNode('datasheet-container', 'more-datasheets');
+						node.children[0].value = partName;
+						node.children[1].value = datasheetDesc;
+						node.children[2].checked = mainIC;
+						var manfID = 'manufacturer-container'+partName;
+						node.children[3].id = manfID;
+						
+						// add manufacturers...
+						
+						for ( var i in manufacturers ) {
+						  addManf(manfID, manufacturers[i]);
+						}
 					}
 					
-					function addManf(manfId) {
-						appendNode(manfId, 'more-manufacturers');
+					function makeManf(manfMarkings='', manfAuthor='', manfURL='') {
+					  var data={};
+					  data.marking = manfMarkings;
+					  data.author = manfAuthor;
+					  data.url = manfURL;
+					  
+					  return data;
+					}
+					
+					function addManf(manfId, manfData=makeManf()) {
+						var node = appendNode(manfId, 'more-manufacturers');
+						node.children[0].value = manfData.marking;
+						node.children[1].value = manfData.author;
+						node.children[2].value = manfData.url;
 					}
 				</script>
 			
@@ -281,7 +327,7 @@
 				<input type="button" value="+" onclick="addDatasheet();">
 			</div>
 		
-			<div id="pin-container">
+			<div id="pin-container" class="datasection">
 				<template id="more-pins"> 
 					<div>
 						Pin: <input type="number" class="pin-number" disabled>&nbsp
@@ -316,7 +362,10 @@
 	</body>
 
 	<script>
+  	var note = addNote('hello');
 		addSpec('Length');
 		addSpec('Width');
+		addSpec('Operating Voltage');
+		addSpec('Interface');
 	</script>
 </html>

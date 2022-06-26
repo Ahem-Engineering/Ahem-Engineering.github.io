@@ -1,0 +1,92 @@
+{
+  "id": "7699334037725",
+  "notes": [
+    "This item does not include a battery and requires a CR2032 Lithium 3 VDC button cell to remember the time when power is removed.",
+    "This device uses a two wire protocol. This is similar to I2C however has no address."
+  ],
+  "specs": [
+    {
+      "name": "Length",
+      "value": "50 mm"
+    },
+    {
+      "name": "Width",
+      "value": "21 mm"
+    },
+    {
+      "name": "Crystal frequency",
+      "value": "32.768 KHz"
+    },
+    {
+      "name": "Operating Voltage",
+      "value": "3.3 - 5 VDC"
+    },
+    {
+      "name": "Interface",
+      "value": "Two wire protocol"
+    }
+  ],
+  "datasheet": [
+    {
+      "part": "DS1302",
+      "description": "Trickle-Charge Timekeeping Chip",
+      "main-ic": true,
+      "manufacturer": [
+        {
+          "author": "Maxim Integrated",
+          "markings": "DS1302N",
+          "url": "https://datasheets.maximintegrated.com/en/ds/DS1302.pdf"
+        }
+      ]
+    }
+  ],
+  "library": [
+    {
+      "author": "Treboada",
+      "url": "https://github.com/Treboada/Ds1302",
+      "recommended": false
+    },
+    {
+      "author": "Matt Sparks",
+      "url": "https://github.com/msparks/arduino-ds1302",
+      "recommended": false
+    },
+    {
+      "author": "Rinky-Dink Electronics",
+      "url": "http://www.rinkydinkelectronics.com/library.php?id=5",
+      "recommended": false
+    },
+    {
+      "author": "Erriez",
+      "url": "https://github.com/Erriez/ErriezDS1302",
+      "recommended": false
+    }
+  ],
+  "pinout": [
+    {
+      "pin": 1,
+      "name": "VCC",
+      "description": "Power input"
+    },
+    {
+      "pin": 2,
+      "name": "GND",
+      "description": "Device ground"
+    },
+    {
+      "pin": 3,
+      "name": "CLK",
+      "description": "Interface clock signal"
+    },
+    {
+      "pin": 4,
+      "name": "DAT",
+      "description": "Interface data signal"
+    },
+    {
+      "pin": 5,
+      "name": "RST",
+      "description": "Interface reset signal"
+    }
+  ]
+}

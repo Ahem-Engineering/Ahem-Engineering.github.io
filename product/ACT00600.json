@@ -1,0 +1,109 @@
+{
+  "id": "7699332595933",
+  "notes": [
+    "Only one 5V and GND connection is required. The second can be used to daisy chain multiple units. Generally it is a good idea to use the connections on the DI side as an input and DO side to connect to the next ACT00600 board."
+  ],
+  "specs": [
+    {
+      "name": "Length",
+      "value": ""
+    },
+    {
+      "name": "Width",
+      "value": ""
+    },
+    {
+      "name": "Interface",
+      "value": "One wire serial"
+    },
+    {
+      "name": "Operating voltage",
+      "value": "5 VDC"
+    },
+    {
+      "name": "Working current",
+      "value": "Typically 12 mA"
+    },
+    {
+      "name": "Refresh rate",
+      "value": "2 kHz"
+    },
+    {
+      "name": "Data rate",
+      "value": "Approx. 800 bits/s"
+    }
+  ],
+  "datasheet": [
+    {
+      "part": "WS2812B",
+      "description": "Intelligent control LED integrated light source",
+      "main-ic": true,
+      "manufacturer": [
+        {
+          "author": "Worldsemi",
+          "markings": "N/A",
+          "url": "http://www.world-semi.com/DownLoadFile/108"
+        }
+      ]
+    }
+  ],
+  "library": [
+    {
+      "author": "Adafruit (Neopixel)",
+      "url": "https://github.com/adafruit/Adafruit_NeoPixel",
+      "recommended": false
+    },
+    {
+      "author": "Harm Aldick",
+      "url": "https://github.com/kitesurfer1404/WS2812FX",
+      "recommended": false
+    },
+    {
+      "author": "Pololu (Led strips)",
+      "url": "https://github.com/pololu/pololu-led-strip-arduino",
+      "recommended": false
+    },
+    {
+      "author": "FastLED",
+      "url": "https://github.com/FastLED/FastLED",
+      "recommended": false
+    },
+    {
+      "author": "Electric Imp",
+      "url": "https://github.com/electricimp/WS2812/tree/v3.0.0",
+      "recommended": false
+    }
+  ],
+  "pinout": [
+    {
+      "pin": 1,
+      "name": "5V",
+      "description": "Power input"
+    },
+    {
+      "pin": 2,
+      "name": "DI",
+      "description": "Data input"
+    },
+    {
+      "pin": 3,
+      "name": "GND",
+      "description": "Device ground"
+    },
+    {
+      "pin": 4,
+      "name": "5V",
+      "description": "Power output"
+    },
+    {
+      "pin": 5,
+      "name": "DO",
+      "description": "Data output"
+    },
+    {
+      "pin": 6,
+      "name": "GND",
+      "description": "Device ground"
+    }
+  ]
+}

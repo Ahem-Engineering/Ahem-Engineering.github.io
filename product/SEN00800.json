@@ -1,0 +1,67 @@
+{
+  "id": "7699324272861",
+  "notes": [
+    "Adjust potentiometer to set distance.",
+    "Detection may be subject to the reflectance of the object to be detected."
+  ],
+  "specs": [
+    {
+      "name": "Length",
+      "value": "32 mm"
+    },
+    {
+      "name": "Width",
+      "value": "14 mm"
+    },
+    {
+      "name": "Interface",
+      "value": "GPIO"
+    },
+    {
+      "name": "Settable Range",
+      "value": "approx. 20 - 300 mm"
+    },
+    {
+      "name": "Operating Voltage",
+      "value": "3.3 - 5 VDC"
+    }
+  ],
+  "datasheet": [
+    {
+      "part": "LM393",
+      "description": "Low-Power, Low-Offset Voltage, Dual Comparators",
+      "main-ic": true,
+      "manufacturer": [
+        {
+          "author": "Texas Instruments",
+          "markings": "LM393 ##X",
+          "url": "https://www.ti.com/lit/ds/symlink/lm393-n.pdf"
+        }
+      ]
+    }
+  ],
+  "library": [
+    {
+      "author": "Arduino built-in (no library)",
+      "url": "https://www.arduino.cc/reference/en/language/functions/digital-io/digitalread/",
+      "recommended": false
+    }
+  ],
+  "pinout": [
+    {
+      "pin": 1,
+      "name": "VCC",
+      "description": "Power input"
+    },
+    {
+      "pin": 2,
+      "name": "GND",
+      "description": "Device ground"
+    },
+    {
+      "pin": 3,
+      "name": "OUT",
+      "description": "Signal output"
+    }
+  ]
+}

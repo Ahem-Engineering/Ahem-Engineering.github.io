@@ -1,0 +1,322 @@
+<html>
+	<head>
+		<script src='./script/json-make.js'></script>
+		<script>
+			function appendNode(container_id, template_id) {			
+				container = document.getElementById(container_id);
+				template = document.getElementById(template_id).content.children[0].innerHTML;
+				var newNode = document.createElement('div');
+				newNode.innerHTML = template;
+				container.appendChild(newNode);
+				//console.log(template_id + ' added to ' + container_id);
+			}
+		
+			function createJSON(output_id) {
+				var output = document.getElementById('output');
+			
+				var data = {};
+			
+				// set ID
+				data.id = document.getElementById('product-id').value;
+			
+				// set Notes
+				var notes = document.getElementsByClassName('note-data');
+						
+				if (notes.length) {
+					data.notes = [];
+					var i = 0;
+					for ( let note of notes ) if ( note.value.length ) data.notes[i++] = note.value;
+				}
+			
+				// set specifications
+				var specs = document.getElementsByClassName('spec-name');
+						
+				if (specs.length) {
+					data.specs = [];
+					var i = 0;
+					for ( let spec of specs ) {
+						var specName = spec.value;
+						var specValue = spec.parentNode.getElementsByClassName('spec-data')[0].value;
+						if ( spec.value.length ) {
+							data.specs[i] = {};
+							data.specs[i].name = specName;
+							data.specs[i].value = specValue;
+							i++;
+						}
+					}
+				}
+				
+
+			
+				// set datasheets
+				var datasheets = document.getElementsByClassName('datasheet-part');
+						
+				if (datasheets.length) {
+					data.datasheet = [];
+					var i = 0;
+					for ( let datasheet of datasheets ) {
+						var partName = datasheet.value;
+						var partDesc = datasheet.parentNode.getElementsByClassName('datasheet-desc')[0].value;
+						var partMainIC = datasheet.parentNode.getElementsByClassName('datasheet-main-ic')[0].checked;
+						if ( datasheet.value.length ) {
+							data.datasheet[i] = {};
+							data.datasheet[i].part = partName;
+							data.datasheet[i].description = partDesc;
+							data.datasheet[i]['main-ic'] = partMainIC;
+							
+							var manufacturers = datasheet.parentNode.getElementsByClassName('manufacturer-author');
+						
+							if (manufacturers.length) {
+								data.datasheet[i].manufacturer = [];
+								var j = 0;
+								for ( let manufacturer of manufacturers ) {
+									var manfAuthor = manufacturer.value;
+									var manfMarkings = manufacturer.parentNode.getElementsByClassName('manufacturer-markings')[0].value;
+									var manfURL = manufacturer.parentNode.getElementsByClassName('manufacturer-url')[0].value;
+									if ( datasheet.value.length ) {
+										data.datasheet[i].manufacturer[j] = {};
+										data.datasheet[i].manufacturer[j].author = manfAuthor;
+										data.datasheet[i].manufacturer[j].markings = manfMarkings;
+										data.datasheet[i].manufacturer[j].url = manfURL;
+							
+										j++;
+									}
+								}
+							}
+							
+							i++;
+						}
+					}
+				}
+				
+				// set libraries
+				var libs = document.getElementsByClassName('lib-author');
+						
+				if (libs.length) {
+					data.library = [];
+					var i = 0;
+					for ( let lib of libs ) {
+						var specAuthor = lib.value;
+						var specURL = lib.parentNode.getElementsByClassName('lib-url')[0].value;
+						var specRecommend = lib.parentNode.getElementsByClassName('lib-recommend')[0].checked;
+						if ( lib.value.length ) {
+							data.library[i] = {};
+							data.library[i].author = specAuthor;
+							data.library[i].url = specURL;
+							data.library[i].recommended = specRecommend;
+							i++;
+						}
+					}
+				}
+				
+				// set pins
+				var pins = document.getElementsByClassName('pin-number');
+						
+				if (pins.length) {
+					data.pinout = [];
+					var i = 0;
+					for ( let pin of pins ) {
+						var pinNumber = parseInt(pin.value);
+						var pinName = pin.parentNode.getElementsByClassName('pin-name')[0].value;
+						var pinDesc = pin.parentNode.getElementsByClassName('pin-description')[0].value;
+						if ( pinNumber > 0 ) {
+							data.pinout[i] = {};
+							data.pinout[i].pin = pinNumber;
+							data.pinout[i].name = pinName;
+							data.pinout[i].description = pinDesc;
+							i++;
+						}
+					}
+				}
+				
+				// output JSON data
+				var json = JSON.stringify(data, null, 2);
+				output.innerHTML = json;
+				
+				var link = document.getElementById('save-link');
+
+				var fileName = document.getElementById('product-code').value;
+				if ( !fileName ) {
+					console.log('No product code specified');
+					return;
+				}
+				
+				fileName += ".json";
+				
+				var saveFile = new Blob([json], {type: 'text/plain'});
+
+				window.URL = window.URL || window.webkitURL;
+				
+				link.href = window.URL.createObjectURL(saveFile);
+				link.download = fileName;
+				link.innerHTML = 'Download';
+			}
+		</script>
+			
+		<title>Ahem store json maker</title>
+	</head>
+	<body>
+		<form>
+			<div>
+				<b>Product Code:</b>
+				<input type='text' id='product-code' onkeyup="
+					document.getElementById('product-code-error').innerHTML = 
+						this.value.length < 8 ? 'Too short' : 
+						this.value.length > 8 ? 'Too long' : 
+						'OK'
+					">
+				<span id="product-code-error"></span>
+			</div>
+			<hr>
+			<div id="product-id-container">
+				<b>Product ID:</b>
+				<input type="number" id="product-id" onkeyup="
+					document.getElementById('product-id-error').innerHTML = 
+						this.value.length < 13 ? 'Too short' : 
+						this.value.length > 13 ? 'Too long' : 
+						'OK'
+					">
+				<span id="product-id-error"></span>
+			</div>
+		
+			<div id="notes-container">
+				<template id='more-notes'> 
+					<div>
+						<textarea class="note-data"></textarea>
+						<input type="button" value="-" onclick="this.parentElement.remove();">
+					</div>
+				</template>
+			
+				<script>
+					function addNote() {
+						console.log('adding note..');
+						appendNode('notes-container', 'more-notes');
+					}
+				
+					// addNote();
+				</script>
+			
+				<b>Notes:</b>
+				<input type="button" value="+" onclick="addNote();">
+				<br>
+			</div>
+
+			<div id="specs-container">
+				<template id="more-specs"> 
+					<div>
+						<input type="text" class="spec-name">
+						<input type="text" class="spec-data">
+						<input type="button" value="-" onclick="this.parentElement.remove();">
+					</div>
+				</template>
+			
+				<script>
+					function addSpec(specName='') {
+						appendNode('specs-container', 'more-specs');
+						var specNames = document.getElementById('specs-container').getElementsByClassName('spec-name');
+						var i = specNames.length - 1;
+						specNames[i].value = specName;
+					}
+				</script>
+
+				<b>Specifications:</b>
+				<input type="button" value="+" onclick="addSpec();">
+			</div>
+		
+			<div id="lib-container">
+				<template id="more-libs"> 
+					<div>
+						Author: <input type="text" class="lib-author">
+						URL: <input type="text" class="lib-url">
+						Recommended: <input type="checkbox" class="lib-recommend">
+						<input type="button" value="-" onclick="this.parentElement.remove();">
+					</div>
+				</template>
+			
+				<script>
+					function addLib() {
+						appendNode('lib-container', 'more-libs');
+					}
+				</script>
+			
+				<b>Libraries:</b>
+				<input type="button" value="+" onclick="addLib();">
+			</div>
+			
+			<div id="datasheet-container">
+				<template id="more-datasheets"> 
+					<div>
+						Part: <input type="text" class="datasheet-part" onkeyup="this.parentElement.getElementsByTagName('div')[0].id = 'manufacturer-container'+this.value">
+						Description: <input type="text" class="datasheet-desc">
+						Main IC: <input type="checkbox" class="datasheet-main-ic">
+						<div id="manufacturer-container" class='datasheet-manf' style="padding-left: 50px;">
+							Manufacturers:
+							<input type="button" value="+" onclick="addManf(this.parentElement.id);">
+						</div>
+						<input type="button" value="remove datasheet" onclick="this.parentElement.remove();">
+					</div>
+				</template>
+				
+				<template id="more-manufacturers"> 
+					<div>
+						Markings: <input type="text" class="manufacturer-markings">
+						Author: <input type="text" class="manufacturer-author">
+						URL: <input type="text" class="manufacturer-url">
+						<input type="button" value="-" onclick="this.parentElement.remove();">
+					</div>
+				</template>
+			
+				<script>
+					function addDatasheet() {
+						appendNode('datasheet-container', 'more-datasheets');
+						addManf('manufacturer-container');
+					}
+					
+					function addManf(manfId) {
+						appendNode(manfId, 'more-manufacturers');
+					}
+				</script>
+			
+				<b>Datasheets:</b>
+				<input type="button" value="+" onclick="addDatasheet();">
+			</div>
+		
+			<div id="pin-container">
+				<template id="more-pins"> 
+					<div>
+						Pin: <input type="number" class="pin-number" disabled>&nbsp
+						Name: <input type="text" class="pin-name">
+						Description: <input type="text" class="pin-description">
+					</div>
+				</template>
+			
+				<script>
+					function addPin() {
+						appendNode('pin-container', 'more-pins');
+
+						var pinNames = document.getElementById('pin-container').getElementsByClassName('pin-number');
+						var pinNumber = pinNames.length;
+						var i = pinNumber - 1;
+
+						pinNames[i].value = pinNumber;
+					}
+				</script>
+			
+				<b>Pins:</b>
+				<input type="button" value="+" onclick="addPin();">
+				<input type="button" value="-" onclick="this.parentElement.getElementsByClassName('pin-name')[this.parentElement.getElementsByClassName('pin-name').length - 1].parentElement.remove();">
+			</div>
+	
+		<input id="submit" type="button" value="create JSON" onclick="createJSON('output');">
+		<a id="save-link" href="#" download></a>
+		</form>
+		<b>Output:</b>
+		<br>
+		<pre id="output"></pre>
+	</body>
+
+	<script>
+		addSpec('Length');
+		addSpec('Width');
+	</script>
+</html>

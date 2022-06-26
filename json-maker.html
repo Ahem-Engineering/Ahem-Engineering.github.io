@@ -139,6 +139,7 @@
 			function JSONrequest(productCode) {
 			  var oReq = new XMLHttpRequest();
         oReq.addEventListener("load", function() {
+          console.log(this.responseText);
           readJSON(this.responseText);
         });
         oReq.open("GET", "/product/"+productCode+'.json');

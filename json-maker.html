@@ -453,16 +453,12 @@
 						node.children[2].value = pinDesc;
 					}
 					
-					var pinarrayhold = [];
-					var pinhold = {};
-					
 					function parsePins(pinArray=[]) {
 					  if (!pinArray.length) return;
 					  
 					  pinArray.sort(function(a,b){return parseInt(a.pin)-parseInt(b.pin);});
 						
 					  for ( var pin of pinArray ) {
-							pinhold = pin;
 					    addPin(pin.name, pin.description);
 					  }
 					}

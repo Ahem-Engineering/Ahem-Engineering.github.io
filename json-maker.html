@@ -1,7 +1,5 @@
 <html>
 	<head>
-		<script src='./script/json-make.js'></script>
-		
 		<style>
 		  .datasection {
 		    background-color: lightblue;
@@ -144,6 +142,7 @@
         });
         oReq.open("GET", "/product/"+productCode+'.json');
         oReq.send();
+				// readJSON(JSON.stringify(exampleData));
 			}
 		</script>
 			
@@ -291,29 +290,29 @@
 					}
 					
 					function objectifyLibs(libs = []) {		
-					var library = [];	
-  				if (libs.length) {
-  					var i = 0;
-  					for ( let lib of libs ) {
-  						var specAuthor = lib.value;
-  						var specURL = lib.parentNode.getElementsByClassName('lib-url')[0].value;
-  						var specRecommend = lib.parentNode.getElementsByClassName('lib-recommend')[0].checked;
-  						if ( lib.value.length ) {
-  							library[i] = {};
-  							library[i].author = specAuthor;
-  							library[i].url = specURL;
-  							library[i].recommended = specRecommend;
-  							i++;
-  						}
-  					}
-  				}
-  				return library;
-  			}
+						var library = [];	
+	  				if (libs.length) {
+	  					var i = 0;
+	  					for ( let lib of libs ) {
+	  						var specAuthor = lib.value;
+	  						var specURL = lib.parentNode.getElementsByClassName('lib-url')[0].value;
+	  						var specRecommend = lib.parentNode.getElementsByClassName('lib-recommend')[0].checked;
+	  						if ( lib.value.length ) {
+	  							library[i] = {};
+	  							library[i].author = specAuthor;
+	  							library[i].url = specURL;
+	  							library[i].recommended = specRecommend;
+	  							i++;
+	  						}
+	  					}
+	  				}
+	  				return library;
+	  			}
 					
 					function parseLib(libArray=[]) {
 					  if (libArray.length) {
 					    for ( var lib of libArray ) {
-					      addSpec(lib.author, lib.url, lib.recommended);
+					      addLib(lib.author, lib.url, lib.recommended);
 					    }
 					  }
 					}
@@ -447,25 +446,21 @@
 					function addPin(pinName='', pinDesc='') {
 						var node = appendNode('pin-container', 'more-pins');
 						
-						console.log(pinName+' <= '+pinDesc);
-						
 						node.children[0].value = document.getElementById('pin-container').getElementsByClassName('pin-number').length - 1;
 						node.children[1].value = pinName;
 						node.children[2].value = pinDesc;
 					}
 					
+					var pinarrayhold = [];
+					var pinhold = {};
+					
 					function parsePins(pinArray=[]) {
 					  if (!pinArray.length) return;
 					  
-					  var pins = [];
-					  for ( var i in pinArray ) {
-					    var index = pinArray[i].pin;
-					    pins[index] = {};
-					    pins[index].name = pinArray[i].name;
-					    pins[index].description = pinArray[i].description;
-					  }
-					  
-					  for ( var pin of pins ) {
+					  pinArray.sort(function(a,b){return parseInt(a.pin)-parseInt(b.pin);});
+						
+					  for ( var pin of pinArray ) {
+							pinhold = pin;
 					    addPin(pin.name, pin.description);
 					  }
 					}

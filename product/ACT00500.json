@@ -11,7 +11,7 @@
 	"notes" : [
 		"This is an N-Channel MOSFET, therefore deviecs are switched on the <i>negative</i> side. This arrangement is integrated into the PCB",
 		"If the MOSFET is getting too hot you can attach a TO220 style heatsink."
-	]
+	],
   "datasheet": [
     {
       "part" : "IRF520",

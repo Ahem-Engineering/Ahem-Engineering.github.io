@@ -1,25 +1,37 @@
 {
-  "id" : "###########",
+  "id": "7706684522717",
   "specs": [
-    { "name" : "Length", "value" : "75 mm" },
-    { "name" : "Width", "value" : "20 mm" },
-    { "name" : "Height", "value" : "18 mm" },
-    { "name" : "Operating Voltage", "value" : "3.7 VDC" },
-    { "name" : "Flylead length", "value" : "150 mm" }
+    {
+      "name": "Length",
+      "value": "75 mm"
+    },
+    {
+      "name": "Width",
+      "value": "20 mm"
+    },
+    {
+      "name": "Height",
+      "value": "18 mm"
+    },
+    {
+      "name": "Operating Voltage",
+      "value": "3.7 VDC"
+    },
+    {
+      "name": "Flylead length",
+      "value": "150 mm"
+    }
   ],
   "pinout": [
     {
-      "pin" : 1,
-      "name" : "Red wire",
-      "description" : "Connection to + battery terminal"
+      "pin": 0,
+      "name": "Red wire",
+      "description": "Connection to + battery terminal"
     },
     {
-      "pin" : 2,
-      "name" : "Black wire",
-      "description" : "Connection to - battery terminal"
+      "pin": 1,
+      "name": "Black wire",
+      "description": "Connection to - battery terminal"
     }
-  ],
-	"note": [
-		"Due to postage regulations we are unable to ship batteries, therefore we do not sell any batteries."
-	]
+  ]
 }

@@ -1,22 +1,39 @@
 {
-  "id" : "7699294945501",
-  "starter": "note: When selecting a library ones for ADPS9960 will work, however the ADPS9930 (this device) does not have RGB light detection, and can only do one dimension gestures",
+  "id": "7699294945501",
+  "specs": [
+    {
+      "name": "Length",
+      "value": ""
+    },
+    {
+      "name": "Width",
+      "value": ""
+    },
+    {
+      "name": "Interface",
+      "value": "I2C"
+    },
+    {
+      "name": "Operating Voltage",
+      "value": ""
+    }
+  ],
   "datasheet": [
     {
-      "part" : "APDS 9930",
-      "description" : "Digital proximity and ambient light sensor",
-      "main-ic" : true,
+      "part": "APDS 9930",
+      "description": "Digital proximity and ambient light sensor",
+      "main-ic": true,
       "manufacturer": [
         {
-          "markings" : "-",
           "author": "Broadcom",
+          "markings": "-",
           "url": "https://docs.broadcom.com/wcs-public/products/data-sheets--technical-specifications/data-sheet/736/749/av02-3190en_ds_apds-9930_2015-11-13.pdf"
         }
       ]
     }
   ],
   "library": [
-    { 
+    {
       "author": "Depau",
       "url": "https://github.com/Depau/APDS9930",
       "recommended": false
@@ -44,34 +61,34 @@
   ],
   "pinout": [
     {
-      "pin" : 1,
-      "name" : "VL",
-      "description" : "?"
+      "pin": 0,
+      "name": "VL",
+      "description": "?"
     },
     {
-      "pin" : 2,
-      "name" : "GND",
-      "description" : "Circuit ground"
+      "pin": 1,
+      "name": "GND",
+      "description": "Circuit ground"
     },
     {
-      "pin" : 3,
-      "name" : "VCC",
-      "description" : "Power in"
+      "pin": 2,
+      "name": "VCC",
+      "description": "Power in"
     },
     {
-      "pin" : 4,
-      "name" : "SCL",
-      "description" : "SCK, Clock"
+      "pin": 3,
+      "name": "SCL",
+      "description": "SCK, Clock"
     },
     {
-      "pin" : 5,
-      "name" : "SDA",
-      "description" : "SDA, data"
+      "pin": 4,
+      "name": "SDA",
+      "description": "SDA, data"
     },
     {
-      "pin" : 6,
-      "name" : "INT",
-      "description" : "Data ready interrupt"
+      "pin": 5,
+      "name": "INT",
+      "description": "Data ready interrupt"
     }
   ]
 }

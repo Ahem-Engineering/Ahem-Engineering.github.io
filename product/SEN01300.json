@@ -1,56 +1,97 @@
 {
-  "id" : "7710451433693",
+  "id": "7710451433693",
+  "specs": [
+    {
+      "name": "Length",
+      "value": ""
+    },
+    {
+      "name": "Width",
+      "value": ""
+    },
+    {
+      "name": "Interface",
+      "value": "I2C/SPI"
+    },
+    {
+      "name": "Working Voltage",
+      "value": "3.3 - 5 VDC"
+    },
+    {
+      "name": "Response Time",
+      "value": "&lt; 60 ms"
+    },
+    {
+      "name": "Operating mode",
+      "value": "fast"
+    }
+  ],
   "datasheet": [
     {
-      "part" : "BMP280",
-      "description" : "Barometric pressure sensor",
-      "main-ic" : true,
+      "part": "BMP280",
+      "description": "Barometric pressure sensor",
+      "main-ic": true,
       "manufacturer": [
         {
-          "markings" : "### KL/### KM",
           "author": "Bosch Sensortec",
+          "markings": "### KL/### KM",
           "url": "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp280-ds001.pdf"
         }
       ]
     }
   ],
   "library": [
-    { 
-      "author": "Arduino built-in (no library)",
-      "url": "https://www.arduino.cc/reference/en/language/functions/digital-io/digitalread/",
+    {
+      "author": "Adafruit",
+      "url": "https://github.com/adafruit/Adafruit_BMP280_Library",
+      "recommended": false
+    },
+    {
+      "author": "Seeed Studio",
+      "url": "https://github.com/Seeed-Studio/Grove_BMP280",
+      "recommended": false
+    },
+    {
+      "author": "Mhafuzul Islam",
+      "url": "https://github.com/mahfuz195/BMP280-arduino-library",
+      "recommended": false
+    },
+    {
+      "author": "Erriez",
+      "url": "https://erriez.github.io/ErriezBMX280/",
       "recommended": false
     }
   ],
   "pinout": [
     {
-      "pin" : 1,
-      "name" : "VCC",
-      "description" : "3.3V power input"
+      "pin": 0,
+      "name": "VCC",
+      "description": "3.3V power input"
     },
     {
-      "pin" : 2,
-      "name" : "GND",
-      "description" : "Circuit ground"
+      "pin": 1,
+      "name": "GND",
+      "description": "Circuit ground"
     },
     {
-      "pin" : 3,
-      "name" : "SCL",
-      "description" : "<p><b>I2C</b>&nbsp;-&nbsp;SCK, Clock</p><p><b>SPI</b>&nbsp;-&nbsp;CLK, Clock</p>"
+      "pin": 2,
+      "name": "SCL",
+      "description": "<p><b>I2C</b>&nbsp;-&nbsp;SCK, Clock</p><p><b>SPI</b>&nbsp;-&nbsp;CLK, Clock</p>"
     },
     {
-      "pin" : 4,
-      "name" : "SDA",
-      "description" : "<p><b>I2C</b>&nbsp;-&nbsp;SDA, data</p><p><b>SPI</b>&nbsp;-&nbsp;MOSI, Serial data In</p>"
+      "pin": 3,
+      "name": "SDA",
+      "description": "<p><b>I2C</b>&nbsp;-&nbsp;SDA, data</p><p><b>SPI</b>&nbsp;-&nbsp;MOSI, Serial data In</p>"
     },
     {
-      "pin" : 5,
-      "name" : "CSB",
-      "description" : "<p><b>I2C</b>&nbsp;-&nbsp;Do not connect/use PULL UP resistor</p><p><b>SPI</b>&nbsp;-&nbsp;CS, Chip Select (active LOW)</p>"
+      "pin": 4,
+      "name": "CSB",
+      "description": "<p><b>I2C</b>&nbsp;-&nbsp;Do not connect/use PULL UP resistor</p><p><b>SPI</b>&nbsp;-&nbsp;CS, Chip Select (active LOW)</p>"
     },
     {
-      "pin" : 6,
-      "name" : "SDO",
-      "description" : "<p><b>I2C</b>&nbsp;-&nbsp;I2C Address select<br>LOW: 0x76, HIGH: 0x77</p><p><b>SPI</b>&nbsp;-&nbsp;MISO, Serial data Out</p>"
+      "pin": 5,
+      "name": "SDO",
+      "description": "<p><b>I2C</b>&nbsp;-&nbsp;I2C Address select<br>LOW: 0x76, HIGH: 0x77</p><p><b>SPI</b>&nbsp;-&nbsp;MISO, Serial data Out</p>"
     }
   ]
 }

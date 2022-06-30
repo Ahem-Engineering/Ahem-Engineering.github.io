@@ -1,0 +1,83 @@
+{
+  "id": "7698415681757",
+  "notes": [
+    "Switch output connects to ground when closed.",
+    "Encoder outputs are in 2-bit grey code.\n<br>\n<table>\n<tr><th>Position</th><th>CLK</th><th>DT</th></tr>\n<tr><td>1</td><td>0</td><td>0</td></tr>\n<tr><td>2</td><td>0</td><td>1</td></tr>\n<tr><td>3</td><td>1</td><td>1</td></tr>\n<tr><td>4</td><td>1</td><td>0</td></tr>\n</table>"
+  ],
+  "specs": [
+    {
+      "name": "Length",
+      "value": "31 mm"
+    },
+    {
+      "name": "Length",
+      "value": "19 mm"
+    },
+    {
+      "name": "Operating Voltage",
+      "value": "5 VDC"
+    },
+    {
+      "name": "Interface",
+      "value": "GPIO"
+    }
+  ],
+  "datasheet": [
+    {
+      "part": "EN11-HSB",
+      "description": "Rotary Encoder",
+      "main-ic": true,
+      "manufacturer": [
+        {
+          "author": "TT Electronics",
+          "markings": "DHV",
+          "url": "https://www.ttelectronics.com/ttelectronics/media/productfiles/datasheets/en11.pdf"
+        }
+      ]
+    }
+  ],
+  "library": [
+    {
+      "author": "dmachard",
+      "url": "https://github.com/dmachard/KY040-rotary",
+      "recommended": false
+    },
+    {
+      "author": "Bill William",
+      "url": "https://github.com/Billwilliams1952/KY-040-Encoder-Library---Arduino",
+      "recommended": false
+    },
+    {
+      "author": "ownprox",
+      "url": "https://github.com/ownprox/Rotary_Encoder_KY-040_Fixed/",
+      "recommended": false
+    }
+  ],
+  "pinout": [
+    {
+      "pin": 0,
+      "name": "CLK",
+      "description": "A signal"
+    },
+    {
+      "pin": 1,
+      "name": "DT",
+      "description": "B signal"
+    },
+    {
+      "pin": 2,
+      "name": "SW",
+      "description": "Switch output"
+    },
+    {
+      "pin": 3,
+      "name": "&plus;",
+      "description": "Power input"
+    },
+    {
+      "pin": 4,
+      "name": "GND",
+      "description": "Device ground"
+    }
+  ]
+}

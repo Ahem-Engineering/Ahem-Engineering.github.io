@@ -1,71 +1,84 @@
 {
-  "id" : "7698422661341",
-  "specs": [
-    { "name" : "Length", "value" : "x mm" },
-    { "name" : "Width", "value" : "x mm" },
-    { "name" : "Operating Voltage", "value" : "3.3 - 5 VDC" }
+  "id": "7698422661341",
+  "notes": [
+    "Adjust digital trigger sensitivity using the onboard potentiometer."
   ],
-	"notes": [
-		"Adjust digital trigger sensitivity using the onboard potentiometer."
-	]
+  "specs": [
+    {
+      "name": "Length",
+      "value": ""
+    },
+    {
+      "name": "Width",
+      "value": ""
+    },
+    {
+      "name": "Interface",
+      "value": "GPIO"
+    },
+    {
+      "name": "Operating Voltage",
+      "value": "3.3 - 5 VDC"
+    }
+  ],
   "datasheet": [
     {
-      "part" : "TCRT5000",
-      "description" : "Reflective Optical Sensor with Transistor Output",
-      "main-ic" : true,
+      "part": "TCRT5000",
+      "description": "Reflective Optical Sensor with Transistor Output",
+      "main-ic": true,
       "manufacturer": [
         {
-          "markings" : "TCRT5000",
           "author": "Vishay",
+          "markings": "TCRT5000",
           "url": "https://www.vishay.com/docs/83760/tcrt5000.pdf"
         }
       ]
     },
     {
-      "part" : "LM393",
-      "description" : "Low-Power, Low-Offset Voltage, Dual Comparators",
-      "main-ic" : false,
+      "part": "LM393",
+      "description": "Low-Power, Low-Offset Voltage, Dual Comparators",
+      "main-ic": false,
       "manufacturer": [
         {
-          "markings" : "LM393 ##M",
           "author": "Texas Instruments",
+          "markings": "LM393 ##M",
           "url": "https://www.ti.com/lit/ds/symlink/lm393-n.pdf"
         }
       ]
     }
   ],
   "library": [
-    { 
+    {
       "author": "Arduino (No library - digitalRead)",
       "url": "https://www.arduino.cc/reference/en/language/functions/digital-io/digitalread/",
       "recommended": false
     },
     {
-      "author": "Arduino (No library - AnalogRead)",
-      "url": "https://www.arduino.cc/en/Reference/AnalogRead",
+      "author": "Arduino (No library - analogRead)",
+      "url": "https://www.arduino.cc/reference/en/language/functions/analog-io/analogread/",
       "recommended": false
     }
   ],
   "pinout": [
     {
-      "pin" : 1,
-      "name" : "VCC",
-      "description" : "Power input"
+      "pin": 0,
+      "name": "VCC",
+      "description": "Power input"
     },
     {
-      "pin" : 2,
-      "name" : "GND",
-      "description" : "Device ground"
+      "pin": 1,
+      "name": "GND",
+      "description": "Device ground"
     },
     {
-      "pin" : 3,
-      "name" : "DO",
-      "description" : "Digital signal output"
+      "pin": 2,
+      "name": "DO",
+      "description": "Digital signal output"
     },
     {
-      "pin" : 4,
-      "name" : "AO",
-      "description" : "Analogue signal output (Raw output)"
-    },
+      "pin": 3,
+      "name": "AO",
+      "description": "Analogue signal output (Raw output)"
+    }
   ]
 }

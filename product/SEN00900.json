@@ -1,54 +1,67 @@
 {
-  "id" : "7705598132445",
+  "id": "7705598132445",
   "specs": [
-    { "name" : "Length", "value" : "x mm" },
-    { "name" : "Width", "value" : "x mm" },
-    { "name" : "Operating Voltage", "value" : "3.3 - 5 VDC" },
-    { "name" : "Response time (fast mode, 3 VDC)", "value" : "60 ms" },
-    { "name" : "Interface", "value" : "GPIO" },
-    { "name" : "Operating mode", "value" : "fast" }
+    {
+      "name": "Length",
+      "value": "x mm"
+    },
+    {
+      "name": "Width",
+      "value": "x mm"
+    },
+    {
+      "name": "Operating Voltage",
+      "value": "3.3 - 5 VDC"
+    },
+    {
+      "name": "Response time (fast mode, 3 VDC)",
+      "value": "60 ms"
+    },
+    {
+      "name": "Interface",
+      "value": "GPIO"
+    },
+    {
+      "name": "Operating mode",
+      "value": "fast"
+    }
   ],
   "datasheet": [
     {
-      "part" : "TTP223",
-      "description" : "1 key touch pad detector IC",
-      "main-ic" : true,
+      "part": "TTP223",
+      "description": "1 key touch pad detector IC",
+      "main-ic": true,
       "manufacturer": [
         {
-          "markings" : "223C ####, 223NC ####",
           "author": "Tontek",
+          "markings": "223C ####, 223NC ####",
           "url": "https://www.tontek.com.tw/uploads/product/244/TTP223-CA6_V2.0_EN.pdf"
         }
       ]
     }
   ],
   "library": [
-    { 
-      "author": "AAA",
-      "url": "https://aaa",
-      "recommended": false
-    },
     {
-      "author": "BBB",
-      "url": "http://bbb",
+      "author": "Arduino (No library - digitalRead)",
+      "url": "https://www.arduino.cc/reference/en/language/functions/digital-io/digitalread/",
       "recommended": false
     }
   ],
   "pinout": [
     {
-      "pin" : 1,
-      "name" : "GND",
-      "description" : "Device ground"
+      "pin": 0,
+      "name": "GND",
+      "description": "Device ground"
     },
     {
-      "pin" : 2,
-      "name" : "I/O",
-      "description" : "Signal output"
+      "pin": 1,
+      "name": "I/O",
+      "description": "Signal output"
     },
     {
-      "pin" : 3,
-      "name" : "VCC",
-      "description" : "Power input"
+      "pin": 2,
+      "name": "VCC",
+      "description": "Power input"
     }
   ]
 }

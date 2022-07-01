@@ -471,11 +471,11 @@
     						var pinNumber = parseInt(pin.value);
     						var pinName = pin.parentNode.getElementsByClassName('pin-name')[0].value;
     						var pinDesc = pin.parentNode.getElementsByClassName('pin-description')[0].value;
-  							
-  							pinout[pinNumber] = {};
-  							pinout[pinNumber].pin = pinNumber;
-  							pinout[pinNumber].name = pinName;
-  							pinout[pinNumber].description = pinDesc;
+  						var index = pinNumber - 1;	
+  							pinout[index] = {};
+  							pinout[index].pin = pinNumber;
+  							pinout[index].name = pinName;
+  							pinout[index].description = pinDesc;
     					}
     				}
     				return pinout;

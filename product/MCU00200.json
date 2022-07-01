@@ -53,7 +53,6 @@
     }
   ],
   "pinout": [
-    null,
     {
       "pin": 1,
       "name": "TX0",

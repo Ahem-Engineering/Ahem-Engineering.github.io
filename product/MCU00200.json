@@ -1,0 +1,178 @@
+{
+  "id": "7705594822877",
+  "notes": [
+    "To program with the Arduino IDE select Tools&gt;Board:&gt;Arduino Micro",
+    "Analogue output (PWM) capable on digital pins 3, 5, 6, 9 and 10 "
+  ],
+  "specs": [
+    {
+      "name": "Length",
+      "value": "33 mm"
+    },
+    {
+      "name": "Width",
+      "value": "18 mm"
+    },
+    {
+      "name": "Operating Voltage",
+      "value": "5 VDC"
+    },
+    {
+      "name": "Interface",
+      "value": "USB Type-C"
+    },
+    {
+      "name": "Flash memory (Program)",
+      "value": "32 KB"
+    },
+    {
+      "name": "SRAM",
+      "value": "2.5 KB"
+    },
+    {
+      "name": "EEPROM",
+      "value": "1 KB"
+    },
+    {
+      "name": "Processor Frequency",
+      "value": "16 MHz"
+    }
+  ],
+  "datasheet": [
+    {
+      "part": "ATmega32U4",
+      "description": "8-bit Microcontroller with 16/32K bytes of ISP Flash and USB Controller",
+      "main-ic": true,
+      "manufacturer": [
+        {
+          "author": "Atmel",
+          "markings": "ATMEGA32U4 -MJ",
+          "url": "https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7766-8-bit-AVR-ATmega16U4-32U4_Datasheet.pdf"
+        }
+      ]
+    }
+  ],
+  "pinout": [
+    null,
+    {
+      "pin": 1,
+      "name": "TX0",
+      "description": "Serial Transmit/Digital pin 1"
+    },
+    {
+      "pin": 2,
+      "name": "RX1",
+      "description": "Serial Receive/Digital pin 0"
+    },
+    {
+      "pin": 3,
+      "name": "GND",
+      "description": "Common ground"
+    },
+    {
+      "pin": 4,
+      "name": "GND",
+      "description": "Common ground"
+    },
+    {
+      "pin": 5,
+      "name": "2",
+      "description": "Digital pin 2"
+    },
+    {
+      "pin": 6,
+      "name": "3",
+      "description": "Digital pin 3"
+    },
+    {
+      "pin": 7,
+      "name": "4",
+      "description": "Analogue input 6/Digital pin 4"
+    },
+    {
+      "pin": 8,
+      "name": "5",
+      "description": "Digital pin 5"
+    },
+    {
+      "pin": 9,
+      "name": "6",
+      "description": "Analogue input 7/Digital pin 6"
+    },
+    {
+      "pin": 10,
+      "name": "7",
+      "description": "Digital pin 7"
+    },
+    {
+      "pin": 11,
+      "name": "8",
+      "description": "Analogue input 8/Digital pin 8"
+    },
+    {
+      "pin": 12,
+      "name": "9",
+      "description": "Analogue input 9/Digital pin 9"
+    },
+    {
+      "pin": 13,
+      "name": "10",
+      "description": "Analogue input 10/Digital pin 10"
+    },
+    {
+      "pin": 14,
+      "name": "16",
+      "description": "Digital pin 16"
+    },
+    {
+      "pin": 15,
+      "name": "14",
+      "description": "Digital pin 14"
+    },
+    {
+      "pin": 16,
+      "name": "15",
+      "description": "Digital pin 15"
+    },
+    {
+      "pin": 17,
+      "name": "A0",
+      "description": "Analogue input 0/Digital pin 18"
+    },
+    {
+      "pin": 18,
+      "name": "A1",
+      "description": "Analogue input 1/Digital pin 19"
+    },
+    {
+      "pin": 19,
+      "name": "A2",
+      "description": "Analogue input 2/Digital pin 20"
+    },
+    {
+      "pin": 20,
+      "name": "A3",
+      "description": "Analogue input 3/Digital pin 21"
+    },
+    {
+      "pin": 21,
+      "name": "VCC",
+      "description": "Voltage out (5 VDC)"
+    },
+    {
+      "pin": 22,
+      "name": "RST",
+      "description": "Microcontoller reset"
+    },
+    {
+      "pin": 23,
+      "name": "GND",
+      "description": "Common ground"
+    },
+    {
+      "pin": 24,
+      "name": "RAW",
+      "description": "Voltage in (6-12 VDC)"
+    }
+  ]
+}

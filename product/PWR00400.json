@@ -1,0 +1,44 @@
+{
+  "id": "7706688684253",
+  "specs": [
+    {
+      "name": "Length",
+      "value": "25 mm"
+    },
+    {
+      "name": "Width",
+      "value": "20 mm"
+    },
+    {
+      "name": "Operating Voltage",
+      "value": "5 VDC"
+    },
+    {
+      "name": "Nominal Battery Voltage",
+      "value": "3.7 VDC"
+    }
+  ],
+  "pinout": [
+    null,
+    {
+      "pin": 1,
+      "name": "5V +",
+      "description": "5 VDC output"
+    },
+    {
+      "pin": 2,
+      "name": "5V -",
+      "description": "GND connection"
+    },
+    {
+      "pin": 3,
+      "name": "Battery +",
+      "description": "Battery holder +"
+    },
+    {
+      "pin": 4,
+      "name": "Battery -",
+      "description": "Batter holder -"
+    }
+  ]
+}

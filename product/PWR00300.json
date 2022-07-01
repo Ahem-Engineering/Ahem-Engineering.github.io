@@ -1,0 +1,47 @@
+{
+  "id": "7756113641693",
+  "notes": [
+    "<b>Before using always check the voltage output</b> using a calibrated meter to ensure the required output voltage is within your specification and if not adjust the potentiometer to the correct voltage required for your circuit using a small screw driver."
+  ],
+  "specs": [
+    {
+      "name": "Length",
+      "value": "36 mm"
+    },
+    {
+      "name": "Width",
+      "value": "17 mm"
+    },
+    {
+      "name": "Input Voltage",
+      "value": "2 - 24 VDC"
+    },
+    {
+      "name": "Output Voltage",
+      "value": "5 - 28 VDC"
+    }
+  ],
+  "pinout": [
+    null,
+    {
+      "pin": 1,
+      "name": "VIN+",
+      "description": "Power input"
+    },
+    {
+      "pin": 2,
+      "name": "VIN-",
+      "description": "Input ground"
+    },
+    {
+      "pin": 3,
+      "name": "VOUT+",
+      "description": "Power output"
+    },
+    {
+      "pin": 4,
+      "name": "VOUT-",
+      "description": "Output ground"
+    }
+  ]
+}

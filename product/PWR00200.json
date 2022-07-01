@@ -1,0 +1,45 @@
+{
+  "id": "7756090605789",
+  "notes": [],
+  "specs": [
+    {
+      "name": "Length",
+      "value": "17 mm"
+    },
+    {
+      "name": "Width",
+      "value": "13 mm"
+    },
+    {
+      "name": "Output Voltage",
+      "value": "3.3 V"
+    },
+    {
+      "name": "Input Voltage",
+      "value": "2.5 - 15 VDC"
+    }
+  ],
+  "pinout": [
+    null,
+    {
+      "pin": 1,
+      "name": "VI-",
+      "description": "Input ground/- connection"
+    },
+    {
+      "pin": 2,
+      "name": "VI+",
+      "description": "input power connection"
+    },
+    {
+      "pin": 3,
+      "name": "VO-",
+      "description": "output ground/- connection"
+    },
+    {
+      "pin": 4,
+      "name": "VO+",
+      "description": "Output power connection"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "7699321716957",
+  "notes": [
+    "The two boards will provide a <b>one way</b> link.",
+    "<b>Pinout</b>\n<p><i>coming soon</it></p>\n<table style='width: 100%;'>\n<tr><th rowspan='2'>Pin</th><th colspan='2'>Transmitter</th><th colspan='2'>Receiver</th></tr>\n<tr><th>Name</th><th>Description</th><th>Name</th><th>Description</th></tr>\n<tr><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>\n<tr><td>2</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>\n<tr><td>3</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>\n<tr><td>4</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>\n</table>"
+  ],
+  "specs": [
+    {
+      "name": "Length (Receiver)",
+      "value": ""
+    },
+    {
+      "name": "Width (Receiver)",
+      "value": ""
+    },
+    {
+      "name": "Operating Voltage (Receiver)",
+      "value": ""
+    },
+    {
+      "name": "Length (Transmitter)",
+      "value": ""
+    },
+    {
+      "name": "Width (Transmitter)",
+      "value": ""
+    },
+    {
+      "name": "Operating Voltage (Transmitter)",
+      "value": ""
+    },
+    {
+      "name": "Carrier Frequency",
+      "value": "433.95 MHz"
+    },
+    {
+      "name": "Modulation",
+      "value": "ASK"
+    },
+    {
+      "name": "Data Rate",
+      "value": "Up to 10 kbps"
+    }
+  ],
+  "datasheet": [
+    {
+      "part": "2SC3356",
+      "description": "NPN Silicon RF Transistor",
+      "main-ic": false,
+      "manufacturer": [
+        {
+          "author": "Renesas",
+          "markings": "R25",
+          "url": "https://www.renesas.com/sg/en/document/dst/2sc3356ne85633-datasheet?language=en"
+        }
+      ]
+    },
+    {
+      "part": "LM358",
+      "description": "Low-Power, Dual-Operational Amplifiers",
+      "main-ic": true,
+      "manufacturer": [
+        {
+          "author": "Texas Instruments",
+          "markings": "LM358 -N",
+          "url": "https://www.ti.com/lit/ds/snosbt3j/snosbt3j.pdf"
+        }
+      ]
+    }
+  ]
+}

@@ -2,7 +2,7 @@
   "id": "7699321716957",
   "notes": [
     "The two boards will provide a <b>one way</b> serial link.",
-    "<b>Pinout</b>\n<table style='width: 100%;'>\n<tr><th rowspan='2'>Pin</th><th colspan='2'>Transmitter</th><th colspan='2'>Receiver</th></tr>\n<tr><th>Name</th><th>Description</th><th>Name</th><th>Description</th></tr>\n<tr><td>1</td><td>DATA</td><td>Serial data input</td><td>GND</td><td>Device ground</td></tr>\n<tr><td>2</td><td>VCC</td><td>Supply power (3.5 - 12 VDC)</td><td rowspan='2'>*DATA</td><td rowspan='2'>Serial data output</td></tr>\n<tr><td>3</td><td>GND</td><td>Device ground</td></tr>\n<tr><td>4</td><td>ANT</td><td>External antenna connection</td><td>VCC</td><td>Supply power (5 VDC)</td></tr>\n</table>\n<i>* Unmarked</i>"
+    "<b>Pinout</b>\n<table style='width: 100%;'>\n<tr><th rowspan='2' style='width: 10%;'>Pin</th><th colspan='2'>Transmitter</th><th colspan='2'>Receiver</th></tr>\n<tr><th style='width: 15%;'>Name</th><th>Description</th><th style='width: 15%;'>Name</th><th>Description</th></tr>\n<tr><td>1</td><td>DATA</td><td>Serial data input</td><td>GND</td><td>Device ground</td></tr>\n<tr><td>2</td><td>VCC</td><td>Supply power (3.5 - 12 VDC)</td><td rowspan='2'>*DATA</td><td rowspan='2'>Serial data output</td></tr>\n<tr><td>3</td><td>GND</td><td>Device ground</td></tr>\n<tr><td>4</td><td>ANT</td><td>External antenna connection</td><td>VCC</td><td>Supply power (5 VDC)</td></tr>\n</table>\n<i>* Unmarked</i>"
   ],
   "specs": [
     {

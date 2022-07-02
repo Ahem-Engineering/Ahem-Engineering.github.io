@@ -1,0 +1,62 @@
+{
+  "id": "7699315261661",
+  "notes": [
+    "Switch produces a <b>HIGH</b> signal when pressed, and <b>LOW</b> signal when released."
+  ],
+  "specs": [
+    {
+      "name": "Length",
+      "value": "22 mm"
+    },
+    {
+      "name": "Width",
+      "value": "11 mm"
+    },
+    {
+      "name": "Operating Voltage",
+      "value": "3.3 - 5 VDC"
+    },
+    {
+      "name": "Interface",
+      "value": "GPIO"
+    }
+  ],
+  "datasheet": [
+    {
+      "part": "WS-TATV THT washable",
+      "description": "Tactile switch",
+      "main-ic": true,
+      "manufacturer": [
+        {
+          "author": "Würth Elektronik",
+          "markings": "",
+          "url": "https://www.we-online.com/catalog/datasheet/430476073716.pdf"
+        }
+      ]
+    }
+  ],
+  "library": [
+    {
+      "author": "Arduino (No library)",
+      "url": "https://www.arduino.cc/reference/en/language/functions/digital-io/digitalread/",
+      "recommended": false
+    }
+  ],
+  "pinout": [
+    {
+      "pin": 1,
+      "name": "VCC",
+      "description": "Power input"
+    },
+    {
+      "pin": 2,
+      "name": "OUT",
+      "description": "Signal output"
+    },
+    {
+      "pin": 3,
+      "name": "GND",
+      "description": "Device ground"
+    }
+  ]
+}

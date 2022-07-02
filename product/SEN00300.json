@@ -1,0 +1,48 @@
+{
+  "id": "7698413060317",
+  "notes": [
+    "Switch produces a <b>LOW</b> signal when pressed, and <b>HIGH</b> signal when released."
+  ],
+  "specs": [
+    {
+      "name": "Length",
+      "value": ""
+    },
+    {
+      "name": "Width",
+      "value": ""
+    },
+    {
+      "name": "Operating Voltage",
+      "value": "3.3 - 5 VDC"
+    },
+    {
+      "name": "Interface",
+      "value": "GPIO"
+    }
+  ],
+  "library": [
+    {
+      "author": "Arduino (No library)",
+      "url": "https://www.arduino.cc/reference/en/language/functions/digital-io/digitalread/",
+      "recommended": false
+    }
+  ],
+  "pinout": [
+    {
+      "pin": 1,
+      "name": "S",
+      "description": "Signal output"
+    },
+    {
+      "pin": 2,
+      "name": "Unmarked",
+      "description": "Power input"
+    },
+    {
+      "pin": 3,
+      "name": "-",
+      "description": "Device ground"
+    }
+  ]
+}

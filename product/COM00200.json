@@ -1,0 +1,71 @@
+{
+  "id": "7699329810653",
+  "notes": [
+    "Connect <b>RXD</b> to your microcontroller <b>RX</b> port and <b>TXD</b> to your microcontroller <b>TX</b> port"
+  ],
+  "specs": [
+    {
+      "name": "Length",
+      "value": ""
+    },
+    {
+      "name": "Width",
+      "value": ""
+    },
+    {
+      "name": "Operating Voltage",
+      "value": "3.3 - 5 VDC"
+    },
+    {
+      "name": "Interface",
+      "value": "Asynchronous serial"
+    },
+    {
+      "name": "Maximum baud rate",
+      "value": "57600"
+    }
+  ],
+  "datasheet": [
+    {
+      "part": "MAX3232",
+      "description": "3.0V to 5.5V, Low-Power, Up to 1Mbps, True RS-232 Transceiver",
+      "main-ic": true,
+      "manufacturer": [
+        {
+          "author": "Maxim Integrated",
+          "markings": "MAX3232 $SE+",
+          "url": "https://datasheets.maximintegrated.com/en/ds/MAX3222-MAX3241.pdf"
+        }
+      ]
+    }
+  ],
+  "library": [
+    {
+      "author": "Arduino (no library)",
+      "url": "https://www.arduino.cc/reference/en/language/functions/communication/serial/c",
+      "recommended": false
+    }
+  ],
+  "pinout": [
+    {
+      "pin": 1,
+      "name": "GND",
+      "description": "Device ground"
+    },
+    {
+      "pin": 2,
+      "name": "RXD",
+      "description": "Serial receiver"
+    },
+    {
+      "pin": 3,
+      "name": "TXD",
+      "description": "Serial transmitter"
+    },
+    {
+      "pin": 4,
+      "name": "VCC",
+      "description": "Power input"
+    }
+  ]
+}

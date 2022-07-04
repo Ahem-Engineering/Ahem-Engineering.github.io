@@ -1,0 +1,94 @@
+{
+  "id": "7761885724893",
+  "specs": [
+    {
+      "name": "Length",
+      "value": "26 mm"
+    },
+    {
+      "name": "Width",
+      "value": "17 mm"
+    },
+    {
+      "name": "Operating Voltage",
+      "value": "5 VDC"
+    },
+    {
+      "name": "Nominal Battery Voltage",
+      "value": "3.7 VDC"
+    },
+    {
+      "name": "Charge Current",
+      "value": "1 A"
+    },
+    {
+      "name": "Charge Cut-off Voltage",
+      "value": "4.2 VDC"
+    },
+    {
+      "name": "Discharge Cut-off Voltage",
+      "value": "2.5 VDC"
+    }
+  ],
+  "datasheet": [
+    {
+      "part": "TP4056",
+      "description": "1A Linear Li-Ion Battery Charge Management IC",
+      "main-ic": true,
+      "manufacturer": [
+        {
+          "author": "Fuman Microelectronics Group Co., Ltd.",
+          "markings": "TC4056A",
+          "url": "https://www.superchip.cn/static/pdfJpg/TC4056A（1A线性锂离子电池电器）.jpg"
+        },
+        {
+          "author": "Ahem Engineering (Translation)",
+          "markings": "TC4056A",
+          "url": "https://git.ahem.net.au/datasheet/TC4056A%20-%20English%20Translation.pdf"
+        }
+      ]
+    }
+  ],
+  "pinout": [
+    {
+      "pin": 1,
+      "name": "TEMP",
+      "description": "NTC Temperature sensor"
+    },
+    {
+      "pin": 2,
+      "name": "PROG",
+      "description": "Charge program selection"
+    },
+    {
+      "pin": 3,
+      "name": "GND",
+      "description": "Device ground"
+    },
+    {
+      "pin": 4,
+      "name": "VCC",
+      "description": "Power input"
+    },
+    {
+      "pin": 5,
+      "name": "BAT",
+      "description": "Battery positive"
+    },
+    {
+      "pin": 6,
+      "name": "STDBY",
+      "description": "Standby indicator"
+    },
+    {
+      "pin": 7,
+      "name": "CHRG",
+      "description": "Charge indicator"
+    },
+    {
+      "pin": 8,
+      "name": "CE",
+      "description": "Chip enable"
+    }
+  ]
+}

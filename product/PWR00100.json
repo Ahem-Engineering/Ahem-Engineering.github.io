@@ -1,5 +1,8 @@
 {
   "id": "7761885724893",
+  "notes": [
+    "Use + and - terminals to bypass USB connection, such as if using an external power supply. These terminals must be supplied 5 VDC."
+  ],
   "specs": [
     {
       "name": "Length",
@@ -52,43 +55,33 @@
   "pinout": [
     {
       "pin": 1,
-      "name": "TEMP",
-      "description": "NTC Temperature sensor"
+      "name": "+",
+      "description": "+ 5 VDC Input"
     },
     {
       "pin": 2,
-      "name": "PROG",
-      "description": "Charge program selection"
+      "name": "-",
+      "description": "Ground input"
     },
     {
       "pin": 3,
-      "name": "GND",
-      "description": "Device ground"
+      "name": "OUT-",
+      "description": "- Voltage output"
     },
     {
       "pin": 4,
-      "name": "VCC",
-      "description": "Power input"
+      "name": "B-",
+      "description": "- Battery terminal"
     },
     {
       "pin": 5,
-      "name": "BAT",
-      "description": "Battery positive"
+      "name": "B+",
+      "description": "+ Battery terminal"
     },
     {
       "pin": 6,
-      "name": "STDBY",
-      "description": "Standby indicator"
-    },
-    {
-      "pin": 7,
-      "name": "CHRG",
-      "description": "Charge indicator"
-    },
-    {
-      "pin": 8,
-      "name": "CE",
-      "description": "Chip enable"
+      "name": "OUT+",
+      "description": "+ Voltage output"
     }
   ]
 }

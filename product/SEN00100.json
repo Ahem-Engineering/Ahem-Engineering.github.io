@@ -1,5 +1,5 @@
 {
-  "id": "7698399953117",
+  "id": "7762997772509",
   "notes": [
     "I2C interface address may be selected by setting SA0 to <b>LOW</b>: 0x1C or <b>HIGH</b>: 0x1D"
   ],
@@ -73,42 +73,42 @@
   ],
   "pinout": [
     {
-      "pin": 0,
+      "pin": 1,
       "name": "VCC_IN",
       "description": "Unregulated power input"
     },
     {
-      "pin": 1,
+      "pin": 2,
       "name": "3.3V",
       "description": "Regulated 3.3V output"
     },
     {
-      "pin": 2,
+      "pin": 3,
       "name": "GND",
       "description": "Circuit ground"
     },
     {
-      "pin": 3,
+      "pin": 4,
       "name": "SCL",
       "description": "I2C Serial Clock"
     },
     {
-      "pin": 4,
+      "pin": 5,
       "name": "SDA",
       "description": "I2C Serial Data"
     },
     {
-      "pin": 5,
+      "pin": 6,
       "name": "SA0",
       "description": "I2C Address select"
     },
     {
-      "pin": 6,
+      "pin": 7,
       "name": "INT2",
       "description": "Interrupt output 2"
     },
     {
-      "pin": 7,
+      "pin": 8,
       "name": "INT1",
       "description": "Interrupt output 1"
     }

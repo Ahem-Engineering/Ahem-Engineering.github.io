@@ -1,5 +1,9 @@
 {
   "id": "7706688684253",
+  "notes": [
+    "Minimum current for 5 VDC output is 50 mA. Some smaller projects may not be able to achieve this. If your project cannot exceed this limitation use a seperate charger and boost module instead.",
+    "Another option to create a minimum current is to add a load across the output to create a leakage current. In this case you can add a 100&Omega; resistor or some high brightness LEDs, however keep in mind this will drain your battery faster."
+  ],
   "specs": [
     {
       "name": "Length",
@@ -10,12 +14,16 @@
       "value": "20 mm"
     },
     {
-      "name": "Operating Voltage",
+      "name": "Input/Output Voltage",
       "value": "5 VDC"
     },
     {
       "name": "Nominal Battery Voltage",
       "value": "3.7 VDC"
+    },
+    {
+      "name": "Output Current",
+      "value": "50 - 2000 mA"
     }
   ],
   "pinout": [

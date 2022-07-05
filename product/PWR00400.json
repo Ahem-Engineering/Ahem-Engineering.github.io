@@ -19,7 +19,6 @@
     }
   ],
   "pinout": [
-    null,
     {
       "pin": 1,
       "name": "5V +",

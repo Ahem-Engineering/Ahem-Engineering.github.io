@@ -1,0 +1,82 @@
+{
+  "id": "7762952257757",
+  "notes": [
+    "This device uses a two-wire serial protocol similar to I2C however it does not have an address component, therefore it should not be used with any I2C devices."
+  ],
+  "specs": [
+    {
+      "name": "Length",
+      "value": "42 mm"
+    },
+    {
+      "name": "Width",
+      "value": "24 mm"
+    },
+    {
+      "name": "Operating Voltage",
+      "value": "3.3 - 5 VDC"
+    },
+    {
+      "name": "Interface",
+      "value": "Two wire protocol"
+    }
+  ],
+  "datasheet": [
+    {
+      "part": "TM1637",
+      "description": "LED Drive Control Dedicated Circuit",
+      "main-ic": true,
+      "manufacturer": [
+        {
+          "author": "Titan Micro",
+          "markings": "TM1637",
+          "url": "http://www.titanmec.com/index.php/en/product/download/id/530.html"
+        }
+      ]
+    }
+  ],
+  "library": [
+    {
+      "author": "Avishay Orpaz",
+      "url": "https://github.com/avishorp/TM1637",
+      "recommended": false
+    },
+    {
+      "author": "Bram Harmsen",
+      "url": "https://github.com/bremme/arduino-tm1637",
+      "recommended": false
+    },
+    {
+      "author": "Erriez",
+      "url": "https://erriez.github.io/ErriezTM1637/",
+      "recommended": false
+    },
+    {
+      "author": "Seeed Studio",
+      "url": "https://github.com/Seeed-Studio/seeed-ardupy-tm1637",
+      "recommended": false
+    }
+  ],
+  "pinout": [
+    {
+      "pin": 1,
+      "name": "CLK",
+      "description": "Data clock"
+    },
+    {
+      "pin": 2,
+      "name": "DIO",
+      "description": "Data input/output"
+    },
+    {
+      "pin": 3,
+      "name": "VCC",
+      "description": "Power input"
+    },
+    {
+      "pin": 4,
+      "name": "GND",
+      "description": "Device ground"
+    }
+  ]
+}

@@ -1,13 +1,13 @@
 {
-  "id": "7710451433693",
+  "id": "7764239319261",
   "specs": [
     {
       "name": "Length",
-      "value": ""
+      "value": "15 mm"
     },
     {
       "name": "Width",
-      "value": ""
+      "value": "12 mm"
     },
     {
       "name": "Interface",
@@ -64,32 +64,32 @@
   ],
   "pinout": [
     {
-      "pin": 0,
+      "pin": 1,
       "name": "VCC",
       "description": "3.3V power input"
     },
     {
-      "pin": 1,
+      "pin": 2,
       "name": "GND",
       "description": "Circuit ground"
     },
     {
-      "pin": 2,
+      "pin": 3,
       "name": "SCL",
       "description": "<p><b>I2C</b>&nbsp;-&nbsp;SCK, Clock</p><p><b>SPI</b>&nbsp;-&nbsp;CLK, Clock</p>"
     },
     {
-      "pin": 3,
+      "pin": 4,
       "name": "SDA",
       "description": "<p><b>I2C</b>&nbsp;-&nbsp;SDA, data</p><p><b>SPI</b>&nbsp;-&nbsp;MOSI, Serial data In</p>"
     },
     {
-      "pin": 4,
+      "pin": 5,
       "name": "CSB",
       "description": "<p><b>I2C</b>&nbsp;-&nbsp;Do not connect/use PULL UP resistor</p><p><b>SPI</b>&nbsp;-&nbsp;CS, Chip Select (active LOW)</p>"
     },
     {
-      "pin": 5,
+      "pin": 6,
       "name": "SDO",
       "description": "<p><b>I2C</b>&nbsp;-&nbsp;I2C Address select<br>LOW: 0x76, HIGH: 0x77</p><p><b>SPI</b>&nbsp;-&nbsp;MISO, Serial data Out</p>"
     }

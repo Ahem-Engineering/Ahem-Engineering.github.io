@@ -1,5 +1,5 @@
 {
-  "id": "7706684522717",
+  "id": "7764476231901",
   "specs": [
     {
       "name": "Length",
@@ -24,12 +24,12 @@
   ],
   "pinout": [
     {
-      "pin": 0,
+      "pin": 1,
       "name": "Red wire",
       "description": "Connection to + battery terminal"
     },
     {
-      "pin": 1,
+      "pin": 2,
       "name": "Black wire",
       "description": "Connection to - battery terminal"
     }

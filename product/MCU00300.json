@@ -1,0 +1,142 @@
+{
+  "id": "7763031589085",
+  "notes": [
+    "To program with the Arduino IDE;\n<ol>\n<li>Select Tools&gt;Board:&gt;Arduino Nano</li>\n<li>Then, select Tools&gt;Processor:&gt;ATMega328p</li>\n</ol>"
+  ],
+  "specs": [
+    {
+      "name": "Length",
+      "value": "45 mm"
+    },
+    {
+      "name": "Width",
+      "value": "18 mm"
+    },
+    {
+      "name": "Input Voltage",
+      "value": "7 - 10 VDC"
+    },
+    {
+      "name": "Operating Voltage",
+      "value": "5 VDC"
+    },
+    {
+      "name": "Interface",
+      "value": "USB Type-C"
+    },
+    {
+      "name": "Flash (Program Memory)",
+      "value": "32 KB"
+    },
+    {
+      "name": "SRAM",
+      "value": "2 KB"
+    },
+    {
+      "name": "EEPROM",
+      "value": "1 KB"
+    },
+    {
+      "name": "Processor Frequency",
+      "value": "16 MHz"
+    }
+  ],
+  "datasheet": [
+    {
+      "part": "ATMega328",
+      "description": "",
+      "main-ic": true,
+      "manufacturer": [
+        {
+          "author": "",
+          "markings": "undefined",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "part": "CH340C",
+      "description": "",
+      "main-ic": false,
+      "manufacturer": [
+        {
+          "author": "",
+          "markings": "undefined",
+          "url": ""
+        }
+      ]
+    }
+  ],
+  "pinout": [
+    {
+      "pin": 1,
+      "name": "",
+      "description": ""
+    },
+    {
+      "pin": 2,
+      "name": "",
+      "description": ""
+    },
+    {
+      "pin": 3,
+      "name": "",
+      "description": ""
+    },
+    {
+      "pin": 4,
+      "name": "",
+      "description": ""
+    },
+    {
+      "pin": 5,
+      "name": "",
+      "description": ""
+    },
+    {
+      "pin": 6,
+      "name": "",
+      "description": ""
+    },
+    {
+      "pin": 7,
+      "name": "",
+      "description": ""
+    },
+    {
+      "pin": 8,
+      "name": "",
+      "description": ""
+    },
+    {
+      "pin": 9,
+      "name": "",
+      "description": ""
+    },
+    {
+      "pin": 10,
+      "name": "",
+      "description": ""
+    },
+    {
+      "pin": 11,
+      "name": "",
+      "description": ""
+    },
+    {
+      "pin": 12,
+      "name": "",
+      "description": ""
+    },
+    {
+      "pin": 13,
+      "name": "",
+      "description": ""
+    },
+    {
+      "pin": 14,
+      "name": "",
+      "description": ""
+    }
+  ]
+}

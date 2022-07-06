@@ -1,6 +1,5 @@
 {
-  "id": "7756090605789",
-  "notes": [],
+  "id": "7764465811677",
   "specs": [
     {
       "name": "Length",
@@ -17,29 +16,32 @@
     {
       "name": "Input Voltage",
       "value": "2.5 - 15 VDC"
+    },
+    {
+      "name": "Maximum Output Current",
+      "value": "600 mA"
     }
   ],
   "pinout": [
-    null,
     {
       "pin": 1,
       "name": "VI-",
-      "description": "Input ground/- connection"
+      "description": "Input power -"
     },
     {
       "pin": 2,
       "name": "VI+",
-      "description": "input power connection"
+      "description": "Input power +"
     },
     {
       "pin": 3,
-      "name": "VO-",
-      "description": "output ground/- connection"
+      "name": "VO+",
+      "description": "Output power +"
     },
     {
       "pin": 4,
-      "name": "VO+",
-      "description": "Output power connection"
+      "name": "VO-",
+      "description": "Output power -"
     }
   ]
 }

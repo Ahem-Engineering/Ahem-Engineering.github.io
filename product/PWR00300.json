@@ -1,5 +1,5 @@
 {
-  "id": "7756113641693",
+  "id": "7764511752413",
   "notes": [
     "<b>Before using always check the voltage output</b> using a calibrated meter to ensure the required output voltage is within your specification and if not adjust the potentiometer to the correct voltage required for your circuit using a small screw driver."
   ],
@@ -22,26 +22,25 @@
     }
   ],
   "pinout": [
-    null,
     {
       "pin": 1,
-      "name": "VIN+",
-      "description": "Power input"
+      "name": "VOUT+",
+      "description": "+ Power output"
     },
     {
       "pin": 2,
-      "name": "VIN-",
-      "description": "Input ground"
+      "name": "VOUT-",
+      "description": "- Power output"
     },
     {
       "pin": 3,
-      "name": "VOUT+",
-      "description": "Power output"
+      "name": "VIN-",
+      "description": "- Power input"
     },
     {
       "pin": 4,
-      "name": "VOUT-",
-      "description": "Output ground"
+      "name": "VIN+",
+      "description": "+ Power input"
     }
   ]
 }

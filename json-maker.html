@@ -1,6 +1,7 @@
 <html>
 	<head>
-		<script>console.log('version 1.0a');</script>
+    <script src="https://sdks.shopifycdn.com/js-buy-sdk/v2/latest/index.umd.min.js"></script>
+		<script>console.log('version 1.0b');</script>
 		
 		<style>
 		  .datasection {
@@ -18,7 +19,13 @@
 		</style>
 		
 		<script>
-	    var test = {};
+      var shopClient = ShopifyBuy.buildClient(
+        {
+          domain: 'ahem-engineering.myshopify.com',
+          storefrontAccessToken: 'c43dd5285b9eaf2ce09081222ee4c393',
+        }
+      );
+
 			function appendNode(container_id, template_id) {			
 				var container = document.getElementById(container_id);
 				var template = document.getElementById(template_id).content.children[0].innerHTML;
@@ -51,6 +58,8 @@
 			  clearDivs('specs-container');
 			  clearDivs('pin-container');
 			  parseID('');
+				
+				document.getElementById('shopify-data').innerHTML='';
 			}
 			
 			function resetPage() {
@@ -134,6 +143,54 @@
 			  parseLib(data.library);
 			  parseDatasheet(data.datasheet);
 			  parsePins(data.pinout);
+				
+				readShop(data.id);
+			}
+			
+			var currentProduct = {};
+			
+			function readShop(id) {
+				if ( !id ) return;
+				
+				var product_request = btoa('gid://shopify/Product/' + id);
+				
+				console.log('Shopify request for ' + id);						
+
+        shopClient.product.fetch(product_request).then(
+          function (product) {
+            var topContainer = document.getElementById('shopify-data');
+						topContainer.append(document.createElement('table'));
+						topContainer.firstChild.style = "width: 100%;"
+						topContainer.firstChild.append(document.createElement('tr'));
+						topContainer.firstChild.firstChild.append(document.createElement('td'));
+						topContainer.firstChild.firstChild.append(document.createElement('td'));
+						topContainer.firstChild.firstChild.append(document.createElement('td'));
+						topContainer.firstChild.firstChild.children[1].style = "width: 10%;";
+						topContainer.firstChild.firstChild.children[2].append(document.createElement('iframe'));
+						
+						var container = topContainer.firstChild.firstChild.firstChild;
+						container.style = "width: 30%;";
+						
+						var frame = topContainer.firstChild.firstChild.children[2].firstChild;
+						frame.src = "https://git.ahem.net.au/product-code.html?product_code="+product.handle.toUpperCase();
+						frame.height = "200px";
+						frame.width = "90%";
+												
+						console.log('Shopify replied: ' + JSON.stringify(product));
+						
+						function addData(container, data) {
+							var div = document.createElement('div');
+							div.innerHTML = data;
+							container.append(div);
+						}
+						
+						addData(container, 'Handle: '+product.handle);
+						addData(container, '<b>'+product.title+'</b>');
+						addData(container, product.description);
+						addData(container, '$'+product.variants[0].price);
+						addData(container, '<a href="http://shop.ahem.net.au/products/'+product.handle+'">store link</a>');
+          }
+        );
 			}
 			
 			function JSONrequest(productCode) {
@@ -143,7 +200,7 @@
           console.log(this.responseText);
           readJSON(this.responseText);
         });
-        oReq.open("GET", "/product/"+productCode+'.json');
+        oReq.open("GET", "https://git.ahem.net.au/product/"+productCode+'.json');
         oReq.send();
 				// readJSON(JSON.stringify(exampleData));
 			}
@@ -184,6 +241,7 @@
 						'OK'
 					">
 				<span id="product-id-error"></span>
+				<div id="shopify-data"></div>
 			</div>
 		
 			<div id="notes-container" class="datasection">
@@ -198,6 +256,7 @@
 					function addNote(text = '') {
 						var node = appendNode('notes-container', 'more-notes');
 						node.children[0].value = text;
+						node.children[0].style = "height: 5em; width: 90%;";
 					}
 					
   				function objectifyNotes(notesArray=[]) {

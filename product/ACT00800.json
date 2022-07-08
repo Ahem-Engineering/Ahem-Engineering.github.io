@@ -1,27 +1,39 @@
 {
-  "id" : "7729897996509",
+  "id": "7767182147805",
   "specs": [
-    { "name" : "Length", "value" : "x mm" },
-    { "name" : "Width", "value" : "x mm" },
-    { "name" : "Operating Voltage", "value" : "5 VDC" },
-    { "name" : "Maximum Current", "value" : "10 A" }
+    {
+      "name": "Length",
+      "value": "43 mm"
+    },
+    {
+      "name": "Width",
+      "value": "17 mm"
+    },
+    {
+      "name": "Operating Voltage",
+      "value": "5 VDC"
+    },
+    {
+      "name": "Maximum Current",
+      "value": "10 A"
+    }
   ],
   "datasheet": [
     {
-      "part" : "SRS-5VDC-SL",
-      "description" : "DPST 5VDC signal relay (same or equivalent)",
-      "main-ic" : true,
+      "part": "SRS-5VDC-SL",
+      "description": "DPST 5VDC signal relay (same or equivalent)",
+      "main-ic": true,
       "manufacturer": [
         {
-          "markings" : "SRS-5VDC-SL",
           "author": "Songle Relay",
+          "markings": "SRS-5VDC-SL",
           "url": "http://www.songlerelay.com/Public/Uploads/20161104/581c823544aa2.pdf"
         }
       ]
     }
   ],
   "library": [
-    { 
+    {
       "author": "Arduino (No library)",
       "url": "https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/",
       "recommended": false
@@ -29,33 +41,34 @@
   ],
   "pinout": [
     {
-      "pin" : 1,
-      "name" : "VCC",
-      "description" : "Power input"
+      "pin": 1,
+      "name": "VCC",
+      "description": "Power input"
     },
     {
-      "pin" : 2,
-      "name" : "GND",
-      "description" : "Device ground"
+      "pin": 2,
+      "name": "GND",
+      "description": "Device ground"
     },
     {
-      "pin" : 3,
-      "name" : "IN",
-      "description" : "Signal trigger input"
-    },{
-      "pin" : 4,
-      "name" : "NC",
-      "description" : "Normally closed (connects to COM when IN is LOW)"
+      "pin": 3,
+      "name": "IN",
+      "description": "Signal trigger input"
     },
     {
-      "pin" : 5,
-      "name" : "COM",
-      "description" : "Switch Common"
+      "pin": 4,
+      "name": "NC",
+      "description": "Normally closed (connects to COM when IN is LOW)"
     },
     {
-      "pin" : 6,
-      "name" : "NO",
-      "description" : "Normally open (connects to COM when IN is HIGH)"
+      "pin": 5,
+      "name": "COM",
+      "description": "Switch Common"
+    },
+    {
+      "pin": 6,
+      "name": "NO",
+      "description": "Normally open (connects to COM when IN is HIGH)"
     }
   ]
 }

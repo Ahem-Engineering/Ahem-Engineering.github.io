@@ -1,45 +1,61 @@
 {
-  "id" : "7699330990301",
-  "specs": [
-    { "name" : "Length", "value" : "x mm" },
-    { "name" : "Width", "value" : "x mm" },
-    { "name" : "Operating Voltage", "value" : "3.3 - 5 VDC" },
-    { "name" : "Switched current", "value" : "5 A (max.)" },
-    { "name" : "Switched voltage", "value" : "24 V (max.)" },
-		{ "name" : "Topology", "value" : "N-Channel" }
+  "id": "7767261151453",
+  "notes": [
+    "This is an N-Channel MOSFET, therefore deviecs are switched on the <i>negative</i> side. This arrangement is integrated into the PCB.",
+    "If the MOSFET is getting too hot you can attach a TO220 style heatsink."
   ],
-	"notes" : [
-		"This is an N-Channel MOSFET, therefore deviecs are switched on the <i>negative</i> side. This arrangement is integrated into the PCB",
-		"If the MOSFET is getting too hot you can attach a TO220 style heatsink."
-	],
+  "specs": [
+    {
+      "name": "Length",
+      "value": "33 mm"
+    },
+    {
+      "name": "Width",
+      "value": "24 mm"
+    },
+    {
+      "name": "Operating Voltage",
+      "value": "3.3 - 5 VDC"
+    },
+    {
+      "name": "Switched current",
+      "value": "5 A (max.)"
+    },
+    {
+      "name": "Switched voltage",
+      "value": "24 V (max.)"
+    },
+    {
+      "name": "Topology",
+      "value": "N-Channel"
+    }
+  ],
   "datasheet": [
     {
-      "part" : "IRF520",
-      "description" : "HEXFET Power MOSFET",
-      "main-ic" : true,
+      "part": "IRF520",
+      "description": "HEXFET Power MOSFET",
+      "main-ic": true,
       "manufacturer": [
         {
-          "markings" : "IRF520",
           "author": "International Rectifier",
+          "markings": "IRF520",
           "url": "http://www.irf.com/product-info/datasheets/data/irf520.pdf"
+        },
+        {
+          "author": "Vishay",
+          "markings": "IRF520",
+          "url": "https://www.vishay.com/docs/91017/irf520.pdf"
         }
       ]
     },
     {
-      "part" : "IRF520",
-      "description" : "Power MOSFET",
-      "main-ic" : true,
-      "manufacturer": [
-        {
-          "markings" : "IRF520",
-          "author": "Vishay",
-          "url": "https://www.vishay.com/docs/91017/irf520.pdf"
-        }
-      ]
+      "part": "IRF520",
+      "description": "Power MOSFET",
+      "main-ic": true
     }
   ],
   "library": [
-    { 
+    {
       "author": "Arduino (no library - analogWrite)",
       "url": "https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/",
       "recommended": false
@@ -52,39 +68,39 @@
   ],
   "pinout": [
     {
-      "pin" : 1,
-      "name" : "SIG",
-      "description" : "Signal input"
+      "pin": 1,
+      "name": "SIG",
+      "description": "Signal input"
     },
     {
-      "pin" : 2,
-      "name" : "VCC",
-      "description" : "Power input"
+      "pin": 2,
+      "name": "VCC",
+      "description": "Power input"
     },
     {
-      "pin" : 3,
-      "name" : "GND",
-      "description" : "Device ground"
+      "pin": 3,
+      "name": "GND",
+      "description": "Device ground"
     },
     {
-      "pin" : 4,
-      "name" : "V+",
-      "description" : "Output device +"
+      "pin": 4,
+      "name": "V+",
+      "description": "Output device +"
     },
     {
-      "pin" : 5,
-      "name" : "V-",
-      "description" : "Output device -"
+      "pin": 5,
+      "name": "V-",
+      "description": "Output device -"
     },
     {
-      "pin" : 6,
-      "name" : "VIN",
-      "description" : "Output device power input"
+      "pin": 6,
+      "name": "VIN",
+      "description": "Output device power input"
     },
     {
-      "pin" : 7,
-      "name" : "GND",
-      "description" : "Output device power ground"
+      "pin": 7,
+      "name": "GND",
+      "description": "Output device power ground"
     }
   ]
 }

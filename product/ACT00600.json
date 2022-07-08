@@ -1,16 +1,16 @@
 {
-  "id": "7699332595933",
+  "id": "7767177363677",
   "notes": [
     "Only one 5V and GND connection is required. The second can be used to daisy chain multiple units. Generally it is a good idea to use the connections on the DI side as an input and DO side to connect to the next ACT00600 board."
   ],
   "specs": [
     {
       "name": "Length",
-      "value": ""
+      "value": "18 mm"
     },
     {
       "name": "Width",
-      "value": ""
+      "value": "13 mm"
     },
     {
       "name": "Interface",

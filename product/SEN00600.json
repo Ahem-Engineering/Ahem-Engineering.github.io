@@ -1,13 +1,17 @@
 {
-  "id": "7699294945501",
+  "id": "7767192568029",
+  "notes": [
+    "To power this unit supply 3.3 VDC to the VL pin then connect VCC to 3.3 VDC by a 22 &Omega; resistor.",
+    "If the device is battery powered (such as using a Li-Ion battery) connect the battery voltage - up to 4.5 VDC - directly to the VL pin and then connect 3.3 VDC to the VCC pin."
+  ],
   "specs": [
     {
       "name": "Length",
-      "value": ""
+      "value": "18 mm"
     },
     {
       "name": "Width",
-      "value": ""
+      "value": "15 mm"
     },
     {
       "name": "Interface",
@@ -15,7 +19,7 @@
     },
     {
       "name": "Operating Voltage",
-      "value": ""
+      "value": "3.3 VDC"
     }
   ],
   "datasheet": [
@@ -61,32 +65,32 @@
   ],
   "pinout": [
     {
-      "pin": 0,
+      "pin": 1,
       "name": "VL",
-      "description": "?"
+      "description": "LED Power"
     },
     {
-      "pin": 1,
+      "pin": 2,
       "name": "GND",
       "description": "Circuit ground"
     },
     {
-      "pin": 2,
+      "pin": 3,
       "name": "VCC",
       "description": "Power in"
     },
     {
-      "pin": 3,
+      "pin": 4,
       "name": "SCL",
       "description": "SCK, Clock"
     },
     {
-      "pin": 4,
+      "pin": 5,
       "name": "SDA",
       "description": "SDA, data"
     },
     {
-      "pin": 5,
+      "pin": 6,
       "name": "INT",
       "description": "Data ready interrupt"
     }

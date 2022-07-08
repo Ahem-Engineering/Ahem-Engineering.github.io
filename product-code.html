@@ -51,9 +51,13 @@
               document.getElementById('product-name').innerHTML = product.title;
 
               var product_anchor = document.getElementById('productURL');
-              var product_url = "http://shop.ahem.net.au/products/" + product.handle;
+              var prod_scheme = 'https';
+              var prod_authority = 'shop.ahem.net.au';
+              var prod_path = '/products/' + product.handle;
+              var prod_short_url = prod_authority + prod_path;
+              var product_url = prod_scheme + '://' + prod_short_url;
 
-              product_anchor.innerHTML = product_url;
+              product_anchor.innerHTML = prod_short_url;
               product_anchor.href = product_url;
 
               qrcode.makeCode(product_url);

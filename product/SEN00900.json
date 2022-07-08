@@ -1,13 +1,13 @@
 {
-  "id": "7705598132445",
+  "id": "7765397176541",
   "specs": [
     {
       "name": "Length",
-      "value": "x mm"
+      "value": "15 mm"
     },
     {
       "name": "Width",
-      "value": "x mm"
+      "value": "11 mm"
     },
     {
       "name": "Operating Voltage",
@@ -49,17 +49,17 @@
   ],
   "pinout": [
     {
-      "pin": 0,
+      "pin": 1,
       "name": "GND",
       "description": "Device ground"
     },
     {
-      "pin": 1,
+      "pin": 2,
       "name": "I/O",
       "description": "Signal output"
     },
     {
-      "pin": 2,
+      "pin": 3,
       "name": "VCC",
       "description": "Power input"
     }

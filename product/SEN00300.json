@@ -1,16 +1,16 @@
 {
-  "id": "7698413060317",
+  "id": "7767097049309",
   "notes": [
     "Switch produces a <b>LOW</b> signal when pressed, and <b>HIGH</b> signal when released."
   ],
   "specs": [
     {
       "name": "Length",
-      "value": ""
+      "value": "18 mm"
     },
     {
       "name": "Width",
-      "value": ""
+      "value": "15 mm"
     },
     {
       "name": "Operating Voltage",

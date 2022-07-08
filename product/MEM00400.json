@@ -1,30 +1,51 @@
 {
-  "id" : "7706677936349",
+  "id": "7765857534173",
   "specs": [
-    { "name" : "Length", "value" : "x mm" },
-    { "name" : "Width", "value" : "x mm" },
-    { "name" : "Operating Voltage", "value" : "3.3 VDC" },
-    { "name" : "Maximum speed", "value" : "104 MHz" },
-    { "name" : "Interface", "value" : "SPI" },
-    { "name" : "Total memory", "value" : "32 Megabits (16,384 pages &times; 256 bytes)" },
-    { "name" : "Additional features", "value" : "<ul><li>Sector/Block erase</li><li>Dual SPI capable</li><li>Unique ID</li></ul>" }
+    {
+      "name": "Length",
+      "value": "14 mm"
+    },
+    {
+      "name": "Width",
+      "value": "15 mm"
+    },
+    {
+      "name": "Operating Voltage",
+      "value": "3.3 VDC"
+    },
+    {
+      "name": "Maximum speed",
+      "value": "104 MHz"
+    },
+    {
+      "name": "Interface",
+      "value": "SPI"
+    },
+    {
+      "name": "Total memory",
+      "value": "4 MB (16,384 pages &times; 256 bytes)"
+    },
+    {
+      "name": "Additional features",
+      "value": "<ul><li>Sector/Block erase</li><li>Dual SPI capable</li><li>Unique ID</li></ul>"
+    }
   ],
   "datasheet": [
     {
-      "part" : "W25Q32FV",
-      "description" : "32 Mega-bit Serial Flash",
-      "main-ic" : true,
+      "part": "W25Q32FV",
+      "description": "32 Mega-bit Serial Flash",
+      "main-ic": true,
       "manufacturer": [
         {
-          "markings" : "25Q32FVSIG",
           "author": "Winbond",
+          "markings": "25Q32 FVSIG",
           "url": "https://www.winbond.com/resource-files/w25q32fv%20revj%2006032016.pdf"
         }
       ]
     }
   ],
   "library": [
-    { 
+    {
       "author": "Marzogh",
       "url": "https://github.com/Marzogh/SPIMemory",
       "recommended": false
@@ -37,34 +58,34 @@
   ],
   "pinout": [
     {
-      "pin" : 1,
-      "name" : "VCC",
-      "description" : "3.3V Power input"
+      "pin": 1,
+      "name": "VCC",
+      "description": "3.3V Power input"
     },
     {
-      "pin" : 2,
-      "name" : "CS",
-      "description" : "CS, Chip select"
+      "pin": 2,
+      "name": "CS",
+      "description": "CS, Chip select"
     },
     {
-      "pin" : 3,
-      "name" : "DO",
-      "description" : "MISO, Serial out"
+      "pin": 3,
+      "name": "DO",
+      "description": "MISO, Serial out"
     },
     {
-      "pin" : 4,
-      "name" : "GND",
-      "description" : "Device ground"
+      "pin": 4,
+      "name": "GND",
+      "description": "Device ground"
     },
     {
-      "pin" : 5,
-      "name" : "CLK",
-      "description" : "CLK, Clock"
+      "pin": 5,
+      "name": "CLK",
+      "description": "CLK, Clock"
     },
     {
-      "pin" : 6,
-      "name" : "DI",
-      "description" : "MOSI, Serial in"
+      "pin": 6,
+      "name": "DI",
+      "description": "MOSI, Serial in"
     }
   ]
 }

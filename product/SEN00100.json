@@ -1,16 +1,16 @@
 {
   "id": "7762997772509",
   "notes": [
-    "I2C interface address may be selected by setting SA0 to <b>LOW</b>: 0x1C or <b>HIGH</b>: 0x1D"
+    "I2C interface address may be selected by setting SA0 to <b>LOW</b>: <code>0x1C</code> or <b>HIGH</b>: <code>0x1D</code>"
   ],
   "specs": [
     {
       "name": "Length",
-      "value": ""
+      "value": "21 mm"
     },
     {
       "name": "Width",
-      "value": ""
+      "value": "15 mm"
     },
     {
       "name": "Interface",
@@ -18,7 +18,7 @@
     },
     {
       "name": "Operating voltage",
-      "value": ""
+      "value": "3.3 - 5 VDC"
     }
   ],
   "datasheet": [

@@ -1,21 +1,50 @@
 {
-  "id" : "7699281412317",
+  "id": "7765306015965",
+  "notes": [
+    "This device uses the first bit of the address to select wether it is a read or write action.\n<table>\n<tr><th>Action</th><th>Address</th></tr>\n<tr><td>Read</td><td>0xA1</td></tr>\n<tr><td>Write</td><td>0xA0</td></tr>\n</table>"
+  ],
+  "specs": [
+    {
+      "name": "Length",
+      "value": ""
+    },
+    {
+      "name": "Width",
+      "value": ""
+    },
+    {
+      "name": "Operating Voltage",
+      "value": "3.5 - 5 VDC"
+    },
+    {
+      "name": "Interface",
+      "value": "I2C"
+    },
+    {
+      "name": "EEPROM size",
+      "value": "32 kB"
+    },
+    {
+      "name": "Endurance",
+      "value": "1,000,000 write cycles"
+    }
+  ],
   "datasheet": [
     {
-      "part" : "24C256",
-      "description" : "EEPROM",
-      "main-ic" : true,
+      "part": "24C256",
+      "description": "EEPROM",
+      "main-ic": true,
       "manufacturer": [
         {
-          "markings" : "ATML$### 2EC$ CN #######",
           "author": "Microchip Technology",
+          "markings": "ATML$### 2EC$ CN #######",
           "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/AT24C128C-AT24C256C-Data-Sheet-DS20006270B.pdf"
         }
       ]
     }
   ],
   "library": [
-    { 
+    {
       "author": "Rob Tillaart",
       "url": "https://github.com/RobTillaart/I2C_EEPROM",
       "recommended": false
@@ -38,24 +67,24 @@
   ],
   "pinout": [
     {
-      "pin" : 1,
-      "name" : "VCC",
-      "description" : "3.3V power input"
+      "pin": 1,
+      "name": "VCC",
+      "description": "3.3V power input"
     },
     {
-      "pin" : 2,
-      "name" : "GND",
-      "description" : "Circuit ground"
+      "pin": 2,
+      "name": "GND",
+      "description": "Circuit ground"
     },
     {
-      "pin" : 3,
-      "name" : "SCL",
-      "description" : "SCK, Clock"
+      "pin": 3,
+      "name": "SCL",
+      "description": "SCK, Clock"
     },
     {
-      "pin" : 4,
-      "name" : "SDA",
-      "description" : "SDA, data"
+      "pin": 4,
+      "name": "SDA",
+      "description": "SDA, data"
     }
   ]
 }

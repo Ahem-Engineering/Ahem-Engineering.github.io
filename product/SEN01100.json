@@ -1,17 +1,41 @@
 {
-  "id" : "7710449860829",
+  "id": "7765368897757",
   "specs": [
-    { "name" : "Length", "value" : "x mm" },
-    { "name" : "Width", "value" : "x mm" },
-    { "name" : "Operating Voltage", "value" : "3.3 - 5 VDC" },
-    { "name" : "Operating frequency", "value" : "40 kHz" },
-    { "name" : "Interface", "value" : "GPIO" },
-    { "name" : "Range", "value" : "60 - 8500 mm" },
-    { "name" : "Accuracy", "value" : "3 mm" },
-    { "name" : "Measurement angle", "value" : "15&deg;" }
+    {
+      "name": "Length",
+      "value": "45 mm"
+    },
+    {
+      "name": "Width",
+      "value": "20 mm"
+    },
+    {
+      "name": "Operating Voltage",
+      "value": "3.3 - 5 VDC"
+    },
+    {
+      "name": "Operating frequency",
+      "value": "40 kHz"
+    },
+    {
+      "name": "Interface",
+      "value": "GPIO"
+    },
+    {
+      "name": "Range",
+      "value": "60 - 4500 mm"
+    },
+    {
+      "name": "Accuracy",
+      "value": "3 mm"
+    },
+    {
+      "name": "Measurement angle",
+      "value": "15&deg;"
+    }
   ],
   "library": [
-    { 
+    {
       "author": "gamegine",
       "url": "https://github.com/gamegine/HCSR04-ultrasonic-sensor-lib",
       "recommended": false
@@ -34,24 +58,24 @@
   ],
   "pinout": [
     {
-      "pin" : 1,
-      "name" : "Vcc",
-      "description" : "Power input"
+      "pin": 1,
+      "name": "Vcc",
+      "description": "Power input"
     },
     {
-      "pin" : 2,
-      "name" : "Trig",
-      "description" : "Trigger signal"
+      "pin": 2,
+      "name": "Trig",
+      "description": "Trigger signal"
     },
     {
-      "pin" : 3,
-      "name" : "Echo",
-      "description" : "Return echo signal"
+      "pin": 3,
+      "name": "Echo",
+      "description": "Return echo signal"
     },
     {
-      "pin" : 4,
-      "name" : "Gnd",
-      "description" : "Device ground"
+      "pin": 4,
+      "name": "Gnd",
+      "description": "Device ground"
     }
   ]
 }

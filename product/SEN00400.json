@@ -1,7 +1,7 @@
 {
-  "id": "7698415681757",
+  "id": "7767176118493",
   "notes": [
-    "Switch output connects to ground when closed.",
+    "Switch output connects to ground when pressed.",
     "Encoder outputs are in 2-bit grey code.\n<br>\n<table>\n<tr><th>Position</th><th>CLK</th><th>DT</th></tr>\n<tr><td>1</td><td>0</td><td>0</td></tr>\n<tr><td>2</td><td>0</td><td>1</td></tr>\n<tr><td>3</td><td>1</td><td>1</td></tr>\n<tr><td>4</td><td>1</td><td>0</td></tr>\n</table>"
   ],
   "specs": [
@@ -55,27 +55,27 @@
   ],
   "pinout": [
     {
-      "pin": 0,
+      "pin": 1,
       "name": "CLK",
       "description": "A signal"
     },
     {
-      "pin": 1,
+      "pin": 2,
       "name": "DT",
       "description": "B signal"
     },
     {
-      "pin": 2,
+      "pin": 3,
       "name": "SW",
       "description": "Switch output"
     },
     {
-      "pin": 3,
+      "pin": 4,
       "name": "&plus;",
       "description": "Power input"
     },
     {
-      "pin": 4,
+      "pin": 5,
       "name": "GND",
       "description": "Device ground"
     }

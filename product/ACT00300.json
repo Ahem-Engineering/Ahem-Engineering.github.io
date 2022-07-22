@@ -1,0 +1,87 @@
+{
+  "id": "7699298222301",
+  "specs": [
+    {
+      "name": "Length",
+      "value": "29 mm"
+    },
+    {
+      "name": "Width",
+      "value": "23 mm"
+    },
+    {
+      "name": "Operating Voltage",
+      "value": "3.3 - 12 VDC"
+    },
+    {
+      "name": "Interface",
+      "value": "GPIO"
+    },
+    {
+      "name": "Drive current (continuous, per channel)",
+      "value": "800 mA"
+    },
+    {
+      "name": "Voltage drop",
+      "value": "1.4 V"
+    }
+  ],
+  "datasheet": [
+    {
+      "part": "L9110",
+      "description": "Motor Control Driver Chip",
+      "main-ic": true,
+      "manufacturer": [
+        {
+          "author": "Ahem Engineering",
+          "markings": "L9110S",
+          "url": "https://git.ahem.net.au/datasheet/L9110%20Datasheet.pdf"
+        }
+      ]
+    }
+  ],
+  "library": [
+    {
+      "author": "Natan Lisowski",
+      "url": "https://github.com/natnqweb/Motor_PID",
+      "recommended": false
+    },
+    {
+      "author": "Falcon Lee",
+      "url": "https://github.com/FalconLee1011/L9110s-Library-for-Arduino",
+      "recommended": false
+    }
+  ],
+  "pinout": [
+    {
+      "pin": 1,
+      "name": "A-1B",
+      "description": "Motor A Backward"
+    },
+    {
+      "pin": 2,
+      "name": "A-1A",
+      "description": "Motor A Forward"
+    },
+    {
+      "pin": 3,
+      "name": "VCC",
+      "description": "Voltage input"
+    },
+    {
+      "pin": 4,
+      "name": "GND",
+      "description": "Device ground"
+    },
+    {
+      "pin": 5,
+      "name": "B-1B",
+      "description": "Motor B Backward"
+    },
+    {
+      "pin": 6,
+      "name": "B-1A",
+      "description": "Motor B Forward"
+    }
+  ]
+}

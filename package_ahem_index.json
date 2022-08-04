@@ -36,6 +36,34 @@
             }
           ],
           "toolsDependencies": []
+        },
+        {
+          "category": "Contributed",
+          "name": "Ahem Engineering AVR boards",
+          "url": "https://github.com/Ahem-Engineering/avr-boards/archive/refs/tags/1.0.1.tar.gz",
+          "version": "1.0.1",
+          "architecture": "avr",
+          "archiveFileName": "1.0.1.tar.gz",
+          "help": {
+            "online": "http://git.ahem.net.au/avr-boards/"
+          },
+          "size": "88693",
+          "checksum": "SHA-256:30e652ff2dcd8092a3c3828ed246c1de47f886c290def1ab6fa4936e3ac439b9",
+          "boards": [
+            {
+              "name": "MCU00100"
+            },
+            {
+              "name": "MCU00200"
+            },
+            {
+              "name": "MCU00300"
+            },
+            {
+              "name": "MCU00400"
+            }
+          ],
+          "toolsDependencies": []
         }
       ],
       "tools": []

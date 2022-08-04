@@ -1,0 +1,18 @@
+<html>
+<body>
+
+  <h1> Extended information for all Ahem Engineering products. </h1>
+  <p> Data is in JSON format </p>
+
+  <p>All data within is &copy; <span id="year">2021</span> Ahem Engineering </p>
+
+  <script>
+    var thisYear = New Date(Date.now()).getFullYear();
+    var firstYear = document.getElementById('year').innerText;
+    
+    if ( thisYear != firstYear ) {
+      document.getElementById('year').innerText += ' - ' + thisYear;
+    }
+  </script>
+</body>
+</html>

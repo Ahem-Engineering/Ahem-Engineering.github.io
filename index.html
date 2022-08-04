@@ -1,23 +1,6 @@
 <html>
   <head>
     <title>Ahem Engineering</title>
-    
-    <script src="https://git.ahem.net.au/script/pull.js"></script>
-    <script src="https://git.ahem.net.au/script/populate.js"></script>
-
-    <script>
-      const urlParams = new URLSearchParams(window.location.search);
-      const product = urlParams.get('product_id');
-      var product_data = {};
-      
-      pullJSON(  'https://git.ahem.net.au/' + product + '.json',
-        function (data) {
-        product_data = data;
-          document.getElementById('git-title').innerHTML = 'Product ID: ' + product;
-          populateDivById('git-meta', data);
-        }
-      );
-    </script>
   </head>
   <body>
     <h1>Welcome to Ahem Engineering</H1>
@@ -26,7 +9,28 @@
       Please check out our <a href="https://shop.ahem.net.au">shop</a> for some awesome parts and great deals!
     </p>
     
-    <h2 id="git-title">Product ID:</h1>
-    <div id="git-meta">Searching...</div>
+    <h2>Support pages</h2>
+    <table style="width: 100%;">
+      <tr>
+        <th>Platforms</th>
+        <th>Libraries</th>
+        <th>Projects</th>
+      </tr>
+      <tr>
+        <td>
+          <ul>
+            <li><a href="https://git.ahem.net.au/avr-boards">AVR</a></li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+          </ul>
+        </td>
+        <td>
+          <ul>
+          </ul>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>

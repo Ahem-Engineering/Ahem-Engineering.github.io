@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Powerbox: Schaefer Power Supply Calculator</title>
+    <style>
+    	body {
+    		margin: 0px;
+    	}
+
+    	.boxed-container {
+    	}
+    	
+    	.boxed-item {
+			  position: relative;
+    		padding: 1em;
+    		border: solid 1px black;
+    		margin: 1em;
+    	}
+    	
+    	.boxed-title {
+    		position: absolute;
+			  top: -0.5em;
+			  background: white;
+			  padding-left: 4px;
+			  padding-right: 4px;
+    	}
+    </style>
+</head>
+<body>
+  <h1>Powerbox Australia: Schaefer Calculator</h1>
+
+  <hr>
+
+	<div id="input-data" class="boxed-container">
+    <h2>Input Data</h2>
+    <div class="boxed-item">
+			<span class="boxed-title">Financial</span>
+			<div class="boxed-content">
+				<span>Exchange Rate: $1 AUD = &euro;</span>
+				<input id="exchange-rate">
+        <br>
+        <span>Postage &amp; Insurance:</span>
+        <input id="postage-insurance" type="number" value="37.5" min="25">
+        <span>%</span>
+        <br>
+        <span>Gross Profit:</span>
+        <input id="gross-profit" type="number" value="35" min="0">
+        <span>%</span>
+			</div>
+		</div>
+
+		<div class="boxed-item">
+			<span class="boxed-title">Input</span>
+			<div class="boxed-content">
+				<span>Type:</span>
+				<select id="input_type">
+					<option value="DC">DC</option>
+					<option value="AC">AC</option>
+					<option value="AC3">AC (3 Phase)</option>
+				</select>
+        <br>
+        <span>Voltage:</span>
+        <input id="input_voltage" type="number" value="48">
+        <span id="input_voltage_descriptor">V</span>
+			</div>
+		</div>
+		
+		<div class="boxed-item">
+			<span class="boxed-title">Output</span>
+			<div class="boxed-content">
+				<span>Type:</span>
+				<select id="output_type">
+					<option value="DC">DC</option>
+					<option value="BC">Battery Charger</option>
+					<option value="AC">AC</option>
+					<option value="AC3">AC (3 Phase)</option>
+				</select>
+        <br>
+        <span>Voltage:</span>
+        <input id="output_voltage" type="number" value="12">
+        <span id="output_voltage_descriptor">V</span>
+        <br>
+        <span>Current:</span>
+        <input id="output_current" type="number" value="0">
+        <span>A</span>
+        <br>
+        <span>Power:</span>
+        <span id="output_power">0</span>
+        <span>W</span>
+			</div>
+		</div>
+	</div>
+
+  <hr>
+  <div id="Project">
+    <h2>Project listing</h2>
+    <table>
+      <tbody id="project-table-body">
+        <tr>
+          <th>Item</th>
+          <th>Quantity</th>
+          <th>Price (&euro;)</th>
+          <th>Price ($)</th>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <hr>
+  <h2>Results</h2>
+  <div id="PSU-listing" class="boxed-container"></div>
+	
+  <script src="schaefer.js"></script>
+  <script>
+    document.getElementById("PSU-listing").append(...product_list);
+
+    function update() {
+      const psu_list = document.getElementById('PSU-listing').children;
+      for ( var sel of document.getElementsByTagName('input') ) {
+        if ( sel.name == "psu-selected") sel.checked = false;
+      }
+
+      var selected = null;
+
+      const getValueFromSelect = (select) => {
+        for ( var i in select.children ) {
+          if ( select.children[i].selected == true ) return select.children[i].value;
+        }
+      };
+      
+      const v_in = Number(document.getElementById("input_voltage").value);
+      const v_out = Number(document.getElementById("output_voltage").value);
+      const i_out =  Number(document.getElementById("output_current").value);
+
+      document.getElementById("output_power").innerHTML = v_out*i_out;
+
+      for ( var i = 0; i < psu_list.length; i += 1 ) {
+        const psu_el = psu_list[i];
+        const psu = psu_el.psu;
+
+        psu_el.style.display = "none";
+
+        if ( psu.input.type != getValueFromSelect(document.getElementById("input_type")) ) continue;
+
+        //console.log(psu.input.type, " => ", psu_el.id, psu);
+        if ( psu.input.min > v_in ) continue;
+        if ( psu.input.max < v_in ) continue;
+
+        if ( psu.output.type != getValueFromSelect(document.getElementById("output_type")) ) continue;
+
+        if ( psu.output.min > v_out ) continue;
+        if ( psu.output.max < v_out ) continue;
+
+        if ( psu.output.current < i_out ) continue;
+
+        if ( selected == null ) {
+          for ( var sel of psu_el.getElementsByTagName("input") ) {
+            if ( sel.name == "psu-selected") {
+              sel.checked = true;
+              selected = sel;
+            }
+          }
+        }
+
+        psu_el.style.display = "block";
+      }
+    }
+
+    for ( var input of document.getElementById("input-data").getElementsByTagName("input") ) {
+      input.onchange = update;
+    }
+
+    for ( var input of document.getElementById("input-data").getElementsByTagName("select") ) {
+      input.onchange = update;
+    }
+
+    document.body.onload = update;
+  </script>
+
+</body>
+</html>
